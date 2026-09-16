@@ -16,4 +16,5 @@ jobs:
         with:
           name: bootstrap2
           path: .bootstrap2/
+          include-hidden-files: true
           if-no-files-found: error
