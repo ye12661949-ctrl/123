@@ -1,0 +1,19 @@
+name: Export Bootstrap Chunks
+on:
+  push:
+    branches: ['migration-expand']
+    paths:
+      - '.github/workflows/export-bootstrap.yml'
+  workflow_dispatch:
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: migration-expand
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bootstrap2
+          path: .bootstrap2/
+          if-no-files-found: error
