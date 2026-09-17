@@ -4,7 +4,7 @@ on:
   push:
     branches: ['migration-expand']
     paths:
-      - '.bootstrap6/chunk43.b64'
+      - '.bootstrap6/chunk21.b64'
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(find .bootstrap6 -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 44
+          test "$(find .bootstrap6 -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 22
           cat $(find .bootstrap6 -maxdepth 1 -name 'chunk*.b64' | sort) > /tmp/practice-index.b64
           base64 --decode /tmp/practice-index.b64 > /tmp/practice-index.tar.xz
           echo "95f60f88e5c54c7463e5aa42b65dea5cea4653fcdb0520240fcfcb66398b0d63  /tmp/practice-index.tar.xz" | sha256sum --check --strict
