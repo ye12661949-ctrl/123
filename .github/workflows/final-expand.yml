@@ -1,0 +1,69 @@
+name: Finalize Practice Index migration
+
+on:
+  push:
+    branches: ['migration-expand']
+    paths:
+      - '.finaltransport/chunk13.b64'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: migration-expand
+          fetch-depth: 0
+
+      - name: Reassemble verified GitHub-ready archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find .finaltransport -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 14
+          cat $(find .finaltransport -maxdepth 1 -name 'chunk*.b64' | sort) > /tmp/practice-index.b64
+          base64 --decode /tmp/practice-index.b64 > /tmp/practice-index.zip
+          echo "3b2d428870146ce7cc78d3cca36417e82b8f2129dc1e337a850cf1f1d2876629  /tmp/practice-index.zip" | sha256sum --check --strict
+          rm -rf /tmp/practice-index-unpack
+          mkdir -p /tmp/practice-index-unpack
+          unzip -q /tmp/practice-index.zip -d /tmp/practice-index-unpack
+          rsync -a --delete --exclude='.git/' /tmp/practice-index-unpack/practice-index-work/ ./
+          test -f src/App.tsx
+          test -f src/data.ts
+          test -f src/PracticeLineages.tsx
+          test -f src/FieldDirectory.tsx
+          test -f .github/workflows/deploy-pages.yml
+          test -f package.json
+
+      - name: Remove transport and old bootstrap files
+        shell: bash
+        run: |
+          rm -rf .finaltransport .bootstrap .bootstrap2 .bootstrap3 .bootstrap4 .bootstrap5 .bootstrap6
+          rm -f .github/workflows/bootstrap-migration.yml
+          rm -f .github/workflows/bootstrap3-expand.yml
+          rm -f .github/workflows/bootstrap4-expand.yml
+          rm -f .github/workflows/bootstrap5-expand.yml
+          rm -f .github/workflows/bootstrap6-expand.yml
+          rm -f .github/workflows/export-bootstrap.yml
+          rm -f .github/workflows/final-expand.yml
+
+      - name: Verify source count
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find . -type f -not -path './.git/*' | wc -l)" -ge 70
+          grep -q 'base:.*\./' vite.config.ts
+
+      - name: Commit complete portable source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Complete Practice Index v59 GitHub migration"
+          git push origin HEAD:migration-expand
