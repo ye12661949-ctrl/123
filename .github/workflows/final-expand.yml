@@ -4,7 +4,7 @@ on:
   push:
     branches: ['migration-expand']
     paths:
-      - '.finaltransport/chunk13.b64'
+      - '.finaltransport/chunk34.b64'
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test "$(find .finaltransport -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 14
+          test "$(find .finaltransport -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 35
           cat $(find .finaltransport -maxdepth 1 -name 'chunk*.b64' | sort) > /tmp/practice-index.b64
           base64 --decode /tmp/practice-index.b64 > /tmp/practice-index.zip
           echo "3b2d428870146ce7cc78d3cca36417e82b8f2129dc1e337a850cf1f1d2876629  /tmp/practice-index.zip" | sha256sum --check --strict
