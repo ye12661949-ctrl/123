@@ -1,0 +1,54 @@
+name: Expand Practice Index portable source v3
+
+on:
+  push:
+    branches: ['migration-expand']
+    paths:
+      - '.bootstrap3/chunk07.b64'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout migration branch
+        uses: actions/checkout@v4
+        with:
+          ref: migration-expand
+          fetch-depth: 0
+
+      - name: Reassemble verified source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find .bootstrap3 -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 8
+          cat $(find .bootstrap3 -maxdepth 1 -name 'chunk*.b64' | sort) > /tmp/practice-index.b64
+          base64 --decode /tmp/practice-index.b64 > /tmp/practice-index.tar.xz
+          echo "ac4638bdf31799cea9dd0a6ef4761f4d4e5d703139e56ba22903661474c5cfa0  /tmp/practice-index.tar.xz" | sha256sum --check --strict
+          tar -xJf /tmp/practice-index.tar.xz -C .
+          test -f src/App.tsx
+          test -f src/data.ts
+          test -f package.json
+          test -f .github/workflows/deploy-pages.yml
+          node scripts/validate-migration.mjs
+
+      - name: Remove migration transport files
+        shell: bash
+        run: |
+          rm -rf .bootstrap .bootstrap2 .bootstrap3
+          rm -f .github/workflows/bootstrap-migration.yml
+          rm -f .github/workflows/bootstrap3-expand.yml
+          rm -f .github/workflows/export-bootstrap.yml
+
+      - name: Commit expanded portable source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Expand verified Practice Index v59 portable source"
+          git push origin HEAD:migration-expand
