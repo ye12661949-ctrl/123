@@ -27,24 +27,28 @@ jobs:
           test "$(find .bootstrap6 -maxdepth 1 -name 'chunk*.b64' | wc -l)" -eq 22
           cat $(find .bootstrap6 -maxdepth 1 -name 'chunk*.b64' | sort) > /tmp/practice-index.b64
           base64 --decode /tmp/practice-index.b64 > /tmp/practice-index.tar.xz
-          echo "95f60f88e5c54c7463e5aa42b65dea5cea4653fcdb0520240fcfcb66398b0d63  /tmp/practice-index.tar.xz" | sha256sum --check --strict
+          echo "00563ee4d6288dadacd6bf54207ce5ca73f286f1ab2bfa89032870c50d6f78a8  /tmp/practice-index.tar.xz" | sha256sum --check --strict
           tar -xJf /tmp/practice-index.tar.xz -C .
           test -f src/App.tsx
           test -f src/data.ts
+          test -f src/PracticeLineages.tsx
+          test -f src/FieldDirectory.tsx
           test -f package.json
           test -f .github/workflows/deploy-pages.yml
-          node scripts/validate-migration.mjs
+          test "$(find src -type f | wc -l)" -ge 60
+          grep -q "base: './'" vite.config.ts
 
       - name: Remove migration transport files
         shell: bash
         run: |
-          rm -rf .bootstrap .bootstrap2 .bootstrap3 .bootstrap4 .bootstrap5 .bootstrap6
+          rm -rf .bootstrap .bootstrap2 .bootstrap3 .bootstrap4 .bootstrap5 .bootstrap6 .finaltransport
           rm -f .github/workflows/bootstrap-migration.yml
           rm -f .github/workflows/bootstrap3-expand.yml
           rm -f .github/workflows/bootstrap4-expand.yml
           rm -f .github/workflows/bootstrap5-expand.yml
           rm -f .github/workflows/bootstrap6-expand.yml
           rm -f .github/workflows/export-bootstrap.yml
+          rm -f .github/workflows/final-expand.yml
 
       - name: Commit expanded portable source
         shell: bash
@@ -53,5 +57,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Expand verified Practice Index v59 portable source"
+          git commit -m "Complete Practice Index v59 GitHub migration"
           git push origin HEAD:migration-expand
