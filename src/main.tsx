@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './directorySupplement';
 import './momaSupplement';
 import './tpgSupplement';
+import './icpSupplement';
 import App from './App';
 import './index.css';
 
