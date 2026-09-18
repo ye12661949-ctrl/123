@@ -4,6 +4,7 @@ import './directorySupplement';
 import './momaSupplement';
 import './tpgSupplement';
 import './icpSupplement';
+import './harukaSakaguchiSupplement';
 import App from './App';
 import './index.css';
 
