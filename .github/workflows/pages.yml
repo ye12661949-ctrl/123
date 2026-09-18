@@ -41,3 +41,5 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
+# Migration source: AppDeploy v59 (1789548344180)
