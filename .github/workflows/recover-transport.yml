@@ -1,0 +1,89 @@
+name: Recover migration transport
+
+on:
+  push:
+    branches: [migration-expand]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: migration-expand
+          fetch-depth: 0
+
+      - name: Inspect all historical transport directories
+        shell: bash
+        run: |
+          set -u
+          echo "HEAD=$(git rev-parse HEAD)"
+          echo "--- repository transport directories ---"
+          find . -maxdepth 1 -type d -name '.bootstrap*' -o -name '.finaltransport' | sort
+
+          for d in .bootstrap .bootstrap2 .bootstrap3 .bootstrap4 .bootstrap5 .bootstrap6 .finaltransport; do
+            [ -d "$d" ] || continue
+            echo
+            echo "===== $d ====="
+            find "$d" -maxdepth 1 -type f -printf '%f %s bytes\n' | sort -V
+
+            mapfile -t parts < <(find "$d" -maxdepth 1 -type f \( -name 'chunk*.b64' -o -name 'chunk*.txt' -o -name 'final-*.txt' -o -name 'final-*.b64' \) | sort -V)
+            echo "parts=${#parts[@]}"
+            [ ${#parts[@]} -gt 0 ] || continue
+
+            cat "${parts[@]}" | tr -d '\r\n\t ' > "/tmp/$(basename "$d").b64"
+            if ! base64 -d "/tmp/$(basename "$d").b64" > "/tmp/$(basename "$d").bin" 2>"/tmp/$(basename "$d").decode.err"; then
+              echo "BASE64_DECODE=FAIL"
+              cat "/tmp/$(basename "$d").decode.err"
+              continue
+            fi
+
+            bin="/tmp/$(basename "$d").bin"
+            echo "decoded_bytes=$(wc -c < "$bin")"
+            sha256sum "$bin"
+            file "$bin" || true
+
+            rm -rf "/tmp/candidate-$(basename "$d")"
+            mkdir -p "/tmp/candidate-$(basename "$d")"
+            out="/tmp/candidate-$(basename "$d")"
+            ok=0
+
+            if xz -t "$bin" >/dev/null 2>&1 && tar -tJf "$bin" >/dev/null 2>&1; then
+              echo "ARCHIVE=xz-tar VALID"
+              tar -xJf "$bin" -C "$out"
+              ok=1
+            elif gzip -t "$bin" >/dev/null 2>&1 && tar -tzf "$bin" >/dev/null 2>&1; then
+              echo "ARCHIVE=gzip-tar VALID"
+              tar -xzf "$bin" -C "$out"
+              ok=1
+            elif unzip -t "$bin" >/dev/null 2>&1; then
+              echo "ARCHIVE=zip VALID"
+              unzip -q "$bin" -d "$out"
+              ok=1
+            elif tar -tf "$bin" >/dev/null 2>&1; then
+              echo "ARCHIVE=tar VALID"
+              tar -xf "$bin" -C "$out"
+              ok=1
+            else
+              echo "ARCHIVE=INVALID_OR_INCOMPLETE"
+            fi
+
+            if [ "$ok" -eq 1 ]; then
+              echo "file_count=$(find "$out" -type f | wc -l)"
+              find "$out" -maxdepth 3 -type f | sort | head -120
+              app=$(find "$out" -type f -path '*/src/App.tsx' | head -1 || true)
+              if [ -n "$app" ]; then
+                echo "App.tsx=$app"
+                echo "App_lines=$(wc -l < "$app")"
+                git hash-object "$app" | sed 's/^/App_git_blob=/'
+              else
+                echo "App.tsx=MISSING"
+              fi
+              data=$(find "$out" -type f -path '*/src/data.ts' | head -1 || true)
+              [ -n "$data" ] && echo "data.ts=FOUND" || echo "data.ts=MISSING"
+            fi
+          done
