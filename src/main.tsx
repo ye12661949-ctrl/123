@@ -5,6 +5,7 @@ import './momaSupplement';
 import './tpgSupplement';
 import './icpSupplement';
 import './harukaSakaguchiSupplement';
+import './tarrahKrajnakSupplement';
 import App from './App';
 import './index.css';
 
