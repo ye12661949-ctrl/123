@@ -1,0 +1,8 @@
+.prize-roster { margin: 24px 0; padding: 20px; border: 1px solid #d7d7cc; border-radius: 12px; background: #f6f6ef; min-width: 0; overflow-wrap: anywhere; }
+.prize-roster h4 { margin-top: 0; }
+.prize-roster-coverage { font-weight: 700; color: #35533e; }
+.prize-status { display: inline-block; margin: 0 10px 8px 0; padding: 4px 9px; border-radius: 20px; background: #e5e5dc; font-size: 12px; }
+.prize-status.is-winner { color: #fff; background: #35533e; }
+.prize-roster .field-related-list { margin-top: 18px; }
+.prize-roster .field-related-list p { margin: 8px 0; }
+@media (max-width: 600px) { .prize-roster { padding: 14px; } }

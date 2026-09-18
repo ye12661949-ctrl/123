@@ -25,27 +25,27 @@ export function PrizeRoster({ onOpenArtist, awardId = 'deutsche', onEditionSelec
       <h4>按届次阅读 · {awardId === 'pictet' ? 'Prix Pictet' : 'Deutsche Börse'}</h4>
       <div className="field-category-tabs" aria-label="奖项年份">
         {editions.map(item => <button key={item.id} aria-pressed={edition.id === item.id}
-          onClick={() => { setSelectedId(item.id); setQuery(''); onEditionSelect?.(item.records.map(record => record.artistId)); }}>{item.label}</button>)}
+          onClick={() => { setSelectedId(item.id); setQuery(''); onEditionSelect?.(item.records.map(record => record.artistId)); }} data-appdeploy-source-id="src_aaae62ace3711a3f2591db0d00e2cb69">{item.label}</button>)}
       </div>
       <p className="prize-roster-coverage" aria-live="polite">{edition.label} 入围名单 · 已收录 {indexedCount} / {edition.expectedCount} 位</p>
       <p className="field-record-note">{edition.note} 此比例仅指本届官方入围名单，尚非该奖项全部历届。</p>
-      <a href={edition.sourceUrl} target="_blank" rel="noreferrer">本届官方完整名单 ↗</a>
+      <a href={edition.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_655988b5a0148b03fdf283d934e66f3e">本届官方完整名单 ↗</a>
       <div className="field-directory-search">
         <label>在本届名单查找
-          <input value={query} onChange={event => setQuery(event.target.value)} placeholder="艺术家、项目、获奖或入围…" />
+          <input value={query} onChange={event => setQuery(event.target.value)} placeholder="艺术家、项目、获奖或入围…" data-appdeploy-source-id="src_23741bb0b646b043a18bb640adb92c2c" />
         </label>
         <span aria-live="polite">显示 {visible.length} / {records.length} 位</span>
-        {query && <button onClick={() => setQuery('')}>清空名单搜索</button>}
+        {query && <button onClick={() => setQuery('')} data-appdeploy-source-id="src_f2c03001f601ba135c5c6664e04907e3">清空名单搜索</button>}
       </div>
       <div className="field-related-list">
         {visible.map(record => {
           const artist = artists.find(item => item.id === record.artistId);
           return <article key={record.artistId}>
             <span className={'prize-status' + (record.status === '获奖' ? ' is-winner' : '')}>{record.status}</span>
-            {artist ? <button onClick={() => onOpenArtist(artist)}>{artist.name} →</button> : <span>艺术家档案整理中</span>}
+            {artist ? <button onClick={() => onOpenArtist(artist)} data-appdeploy-source-id="src_ad39005b54ca07f2896ce237b1950681">{artist.name} →</button> : <span>艺术家档案整理中</span>}
             <p><strong>{record.project}</strong></p>
             <p>{record.period}</p>
-            <a href={record.sourceUrl} target="_blank" rel="noreferrer">项目与提名依据 ↗</a>
+            <a href={record.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_c0e528e54f952cb1e062f1334dbd9b35">项目与提名依据 ↗</a>
           </article>;
         })}
       </div>

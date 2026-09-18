@@ -11,12 +11,12 @@ function ArchiveImageFigure({ image }: { image: ArchiveImage }) {
     <figure className="archive-image">
       <div className="archive-image-frame">
         {failed ? (
-          <div className="archive-image-fallback"><span>图像外链暂时不可用</span><a href={image.sourceUrl} target="_blank" rel="noreferrer">到来源查看 <ExternalLink size={12} /></a></div>
+          <div className="archive-image-fallback"><span>图像外链暂时不可用</span><a href={image.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_1a3edf04166bf29b6e172c1200ca3726">到来源查看 <ExternalLink size={12} /></a></div>
         ) : (
           <img src={image.url} alt={image.title} loading="lazy" referrerPolicy="no-referrer" onError={() => setFailed(true)} />
         )}
       </div>
-      <figcaption><b>{image.title}</b><span>{image.credit}</span><a href={image.sourceUrl} target="_blank" rel="noreferrer">{image.sourceLabel} <ExternalLink size={11} /></a></figcaption>
+      <figcaption><b>{image.title}</b><span>{image.credit}</span><a href={image.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_fd652976a2a1c795abc0a0b7f9a56b40">{image.sourceLabel} <ExternalLink size={11} /></a></figcaption>
     </figure>
   );
 }
@@ -56,7 +56,7 @@ export function CompleteArtistArchive({ artist }: { artist: Artist }) {
         <div className="archive-projects">
           {archive.projects.map((project, index) => (
             <details className="archive-project" key={project.title} open={index === 0}>
-              <summary>
+              <summary data-appdeploy-source-id="src_91b8d61a5a37f8323d9adb09548e3d7c">
                 <div><span>{String(index + 1).padStart(2, '0')} · {project.cluster} · {project.period}</span><h4>{project.title}</h4></div>
                 <div className="archive-project-status"><b>{project.images.length > 0 ? `${project.images.length} 张已入库` : '图像待补'}</b><span>展开 +</span></div>
               </summary>
@@ -65,7 +65,7 @@ export function CompleteArtistArchive({ artist }: { artist: Artist }) {
                 <div className="archive-actions"><b>实际创作 / 研究动作</b>{project.actions.map(action => <span key={action}>{action}</span>)}</div>
                 {project.images.length > 0 && <div className="archive-gallery">{project.images.map(image => <ArchiveImageFigure image={image} key={`${project.title}-${image.title}`} />)}</div>}
                 {project.relations.length > 0 && <div className="archive-relations"><b>展览 / 出版 / 奖项关系</b>{project.relations.map(item => <p key={`${item.kind}-${item.label}`}><em>{item.kind}</em><strong>{item.label}</strong>{item.detail && <span>{item.detail}</span>}</p>)}</div>}
-                <a className="archive-source" href={project.sourceUrl} target="_blank" rel="noreferrer">查看作品 / 机构来源 <ExternalLink size={12} /></a>
+                <a className="archive-source" href={project.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_5451260cafd7abb0a9fd37999c945579">查看作品 / 机构来源 <ExternalLink size={12} /></a>
               </div>
             </details>
           ))}
@@ -74,7 +74,7 @@ export function CompleteArtistArchive({ artist }: { artist: Artist }) {
           <div><h4>奖项 / 提名时间线</h4>{archive.awards.length === 0 && <p>此档案暂未补入已核对的奖项记录。</p>}{archive.awards.map(item => <p key={item}>◆ {item}</p>)}</div>
           <div><h4>重要展览节点</h4>{archive.exhibitions.length === 0 && <p>请先查看逐项目来源中的作品与馆藏记录。</p>}{archive.exhibitions.map(item => <p key={item}>— {item}</p>)}</div>
         </div>
-        <div className="source-row">{archive.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} <ExternalLink size={12} /></a>)}</div>
+        <div className="source-row">{archive.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_987c4191087e660b627532f5186c9682">{source.label} <ExternalLink size={12} /></a>)}</div>
       </div>
     </section>
   );
@@ -91,7 +91,7 @@ export function CuratorRelations({ curatorId }: { curatorId: string }) {
       <div className="curator-exhibitions">
         {network.exhibitions.map(exhibition => <div key={`${exhibition.year}-${exhibition.title}`}><b>{exhibition.year}</b><strong>{exhibition.title}</strong><p>{exhibition.artists.join(' · ')}</p></div>)}
       </div>
-      <div className="source-row">{network.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} <ExternalLink size={11} /></a>)}</div>
+      <div className="source-row">{network.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_de4042edbd54731dceafa9e83e397e40">{source.label} <ExternalLink size={11} /></a>)}</div>
     </div>
   );
 }
@@ -109,14 +109,14 @@ export function EcosystemDashboard() {
       <div className="institution-grid">
         {institutions.map(item => (
           <details className="institution-card" key={item.id}>
-            <summary><span>{item.type} · {item.geography}</span><h3>{item.name}</h3><p>{item.scale}</p></summary>
+            <summary data-appdeploy-source-id="src_2b691c16258fadda9a9345918896e71a"><span>{item.type} · {item.geography}</span><h3>{item.name}</h3><p>{item.scale}</p></summary>
             <div className="institution-body">
               <p className="ecosystem-lead">{item.whyItMatters}</p>
               <h4>真实信号</h4>{item.signals.map(signal => <p key={signal}>◆ {signal}</p>)}
               <h4>相关策展人 / 人物</h4><div className="ecosystem-tags">{item.people.map(person => <span key={person}>{person}</span>)}</div>
               <h4>相关展览 / 项目</h4>{item.exhibitions.map(exhibition => <p key={exhibition}>— {exhibition}</p>)}
               {item.connectedAwards.length > 0 && <><h4>直接相连的奖项</h4><div className="ecosystem-tags">{item.connectedAwards.map(award => <span key={award}>{award}</span>)}</div></>}
-              <div className="source-row">{item.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} <ExternalLink size={11} /></a>)}</div>
+              <div className="source-row">{item.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_db4c6fe7939dfdaf53d51cf998957d5f">{source.label} <ExternalLink size={11} /></a>)}</div>
             </div>
           </details>
         ))}
@@ -125,13 +125,13 @@ export function EcosystemDashboard() {
       <div className="award-grid">
         {awards.map(item => (
           <details className="award-card" key={item.id}>
-            <summary><span>{item.field}</span><h3>{item.name}</h3><p>{item.linkedInstitution}</p></summary>
+            <summary data-appdeploy-source-id="src_d2efdf1169e97944d8fc924c2a26c08f"><span>{item.field}</span><h3>{item.name}</h3><p>{item.linkedInstitution}</p></summary>
             <div className="award-body">
               <h4>怎么产生</h4><p>{item.selectionMode}</p>
               <h4>它真正说明什么</h4><p>{item.whatItSignals}</p>
               <h4>近年硬信号</h4>{item.recentEvidence.map(signal => <p key={signal}>◆ {signal}</p>)}
               <div className="reality-box award-reality"><h4>现实情况</h4>{item.reality.map(signal => <p key={signal}>! {signal}</p>)}</div>
-              <div className="source-row">{item.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} <ExternalLink size={11} /></a>)}</div>
+              <div className="source-row">{item.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_15de0e2c79644d397509ac728b0f546c">{source.label} <ExternalLink size={11} /></a>)}</div>
             </div>
           </details>
         ))}

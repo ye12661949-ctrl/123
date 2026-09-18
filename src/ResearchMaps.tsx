@@ -46,12 +46,12 @@ export function CuratorNetworkMap() {
       </div>
 
       <div className="curator-selector" aria-label="选择策展人">
-        <button className={selectedCurator === null ? 'active' : ''} onClick={() => setSelectedCurator(null)}>全部关系</button>
+        <button className={selectedCurator === null ? 'active' : ''} onClick={() => setSelectedCurator(null)} data-appdeploy-source-id="src_ed26957e4629e36dd7e18e9399910323">全部关系</button>
         {curatorProfiles.map(curator => (
           <button
             key={curator.id}
             className={selectedCurator === curator.id ? 'active' : ''}
-            onClick={() => setSelectedCurator(curator.id)}
+            onClick={() => setSelectedCurator(curator.id)} data-appdeploy-source-id="src_fca3c06fe5d45c742a7027e4f786d7b2"
           >
             {curator.name}
           </button>
@@ -145,7 +145,7 @@ export function InstitutionHierarchy() {
           <button
             key={category.id}
             className={field === category.id ? 'active' : ''}
-            onClick={() => setField(current => current === category.id ? 'all' : category.id)}
+            onClick={() => setField(current => current === category.id ? 'all' : category.id)} data-appdeploy-source-id="src_22a686798fe54543e322c94f42d8afd3"
           >
             <span>一级领域</span>
             <strong>{category.shortLabel}</strong>

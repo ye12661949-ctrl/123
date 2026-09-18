@@ -1,0 +1,178 @@
+# Tests
+
+## Test 15 - Art-standard ranking and expanded MoMA index
+Viewport: desktop (1280x800)
+Covers: art-standard ecosystem ranking, photography award art-weight distinction, expanded MoMA artist index
+Description: Rankings explicitly measure contemporary-art institutional/canonical weight rather than photographic popularity, and MoMA filtering includes a substantially broader verified set of artists already represented in the database.
+Steps:
+1. Enter 当代摄影 and compare 摄影奖项 and 摄影节 entries.
+2. Confirm entries display 艺术含金量 with S+/S/A/B/C, numeric score and rank.
+3. Enter 当代艺术, open MoMA, then inspect the main ARTISTS results.
+4. Search several known MoMA-linked artists including Jeff Wall, Rineke Dijkstra, Samuel Fosso, Ming Smith and LaToya Ruby Frazier.
+Expected: Deutsche Börse ranks above industry-oriented World Press Photo and Sony under the art-standard metric; MoMA is S+ and the MoMA index exposes the expanded verified artist set without duplicate identities.
+
+
+## Test 10 - Foam Talent 2016 complete roster and artist navigation
+Viewport: desktop (1280x800)
+Covers: contemporary photography directory drill-down, Foam Talent 2016 complete roster, artist drawer navigation, artwork imagery
+Description: Foam Talent now behaves as a real directory: opening it shows the complete 2016 roster instead of only artists incidentally matched by archive text.
+Steps:
+1. Enter 当代摄影, choose 展览 / 摄影机构 and open Foam Talent.
+2. Confirm the detail heading reads 2016 完整入选艺术家 · 24 位.
+3. Open Juno Calypso and inspect her Foam Talent 2016 achievement and artwork image.
+4. Return and open Daisuke Yokota; inspect his Foam Talent 2016 record and artwork image.
+Expected: Exactly 24 named artists are visible for 2016, each name opens an artist drawer, and Juno Calypso and Daisuke Yokota show sourced artwork imagery rather than an empty directory-only record.
+
+
+## Test 1 - Prix Pictet complete Human roster and artist navigation [sanity]
+Viewport: desktop (1280x800)
+Covers: photography hierarchy, Human 12-person roster, cycle and award years, winner status, project search, sourced artist archive
+Description: The Human cycle connects all twelve nominees to real project archives.
+Steps:
+1. Note the main artist count, enter 当代摄影 and 摄影奖项 / 资助, search Pictet and open Prix Pictet.
+2. Inspect Human · 第十届 · 2023 and its coverage count.
+3. Search 获奖 inside 在本届名单查找.
+4. Clear the roster search, search Firefly and open Yael Martínez.
+Expected: Coverage is 12 / 12. The note distinguishes theme announcement in 2022 from the 2023 result. Searching 获奖 returns Gauri Gill only. Firefly opens Yael's archive with printing, pinpricking, lighting through holes and rephotography, plus sourced images. Directory browsing does not filter the main artist list.
+
+## Test 2 - Whitney 2024 expanded artists and material processes
+Viewport: desktop (1280x800)
+Covers: biennale selection, new art records, three Jes Fan projects, source links, preserved artist association
+Description: The existing Whitney edition now links nine artists without claiming whole-edition completeness.
+Steps:
+1. Enter 当代艺术, choose Whitney and 2024, then select Even Better Than the Real Thing.
+2. Inspect the resulting artist cards; open Jes Fan.
+3. Inspect Cross Section, Contrapposto and Gut.
+4. Open Lotus L. Kang and Dala Nasser.
+Expected: The selected unit contains Carmen Winant, Isaac Julien and seven new artists. Jes has three project records with scanning, duplication and wall viewing described. Kang has exposure and hanging-film details; Nasser has charcoal rubbings, clay dyeing and fabric-covered columns. Official sources and project images are accessible. The edition is not marked complete.
+
+## Test 3 - Mobile roster search recovery and existing prize years
+Viewport: mobile (375x667)
+Covers: roster empty state, accent-insensitive search, reset, prize switching, preserved Deutsche Börse rosters, responsive layout
+Description: Per-edition search works without leaking between prize entries.
+Steps:
+1. Open Prix Pictet in photography awards. Search Sian within the roster.
+2. Search zz-no-person-98765 within the same roster.
+3. Clear the roster search, then open the Deutsche Börse directory entry.
+4. Switch between 2026 and 2025.
+Expected: Sian finds Siân Davey. Selecting 当代摄影 globally changes the main results heading to 当代摄影 · ARTISTS and rebuilds filter vocabulary from photography artists. Foam Talent exposes its populated historical rosters. Photography festivals are ordered by importance and marked S/A/B/C. Images Vevey exposes the verified 2024 Biennale roster of 49 artist/artist-group entries and its 2026 index; Grand Prix Images Vevey historical winners are indexed from 1995 through 2025/2026. KYOTOGRAPHIE, Fotografia Europea, FORMAT, LagosPhoto, Belfast Photo Festival, PHotoESPAÑA and Circulation(s) expose populated edition buttons where verified data has been entered; selecting an edition filters the same main ARTISTS column. Deutsche Börse and Prix Pictet year/edition buttons likewise drive the main ARTISTS column rather than a duplicate list. Selecting 当代艺术 rebuilds both artist results and filter vocabulary for the art scope. Long project titles and image captions wrap on mobile without page overflow.
+
+## Test 4 - Enriched existing archives and saved research
+Viewport: mobile (375x667)
+Covers: archive preservation, new Vasantha project, Isaac project enrichment, bookmarks, notes persistence, comparison
+Description: New data retains existing work and participates in research tools.
+Steps:
+1. Search Vasantha Yogananthan and inspect A Myth of Two Souls and Mystery Street.
+2. Search Isaac Julien and open the complete archive; inspect Once Again… (Statues Never Die).
+3. Search Gera Artemova, bookmark her, add a note and reload.
+4. Reopen the saved artist and compare her with Siân Davey.
+Expected: Vasantha has both projects with distinct making processes. Isaac retains all five existing projects and the Once Again entry specifies five screens and the 2024 Whitney relation. Gera's bookmark and note persist; her diptych process and Davey's garden-making process are visible in comparison.
+
+## Test 5 - New artist batch and expanded practice lineages
+Viewport: desktop (1280x800)
+Covers: new sourced artist archives, duration lineage expansion, self-performance direct-response evidence, appropriation lineage, body-data lineage
+Description: The new artist batch is searchable and participates directly in the practice-lineage research system.
+Steps:
+1. Search Roman and open Roman Opałka; inspect OPALKA 1965 / 1–∞ and its sources.
+2. Scroll to 创作脉络与并行比较, open 时间与重复行动 and inspect Opałka, 河原温, 谢德庆 and Hanne Darboven.
+3. Open 自拍、角色与身份模型, switch to 并行比较, choose Cindy Sherman and Yasumasa Morimura.
+4. Open 现成图像、再摄影与平台挪用 and 脸、身体与机器读取; open Richard Prince, Heather Dewey-Hagborg and Eva O’Leary from lineage nodes.
+Expected: Roman has a sourced lifetime counting archive with painting, audio and portrait actions. The duration topic contains five nodes. Sherman / Morimura is labeled 有据可查的明确回应, while unrelated pairs stay 并行比较. Appropriation contains Levine, Prince, Schmid, Umbrico and Henner; body-data contains Dewey-Hagborg, O’Leary, Paglen and Jes Fan. New artist drawers expose project actions and source links.
+
+## Test 6 - Material photography and constructed evidence lineages
+Viewport: desktop (1280x800)
+Covers: material photography lineage, evidence and fictional archive lineage, existing artist archive navigation, parallel-comparison guardrail
+Description: Existing deep archives are connected into two new method lineages without turning formal similarity into unsupported influence claims.
+Steps:
+1. Scroll to 创作脉络与并行比较 and open 摄影材料：从图像到物体.
+2. Inspect Beshty, Deschenes, Yokota and Goudal, then open Daisuke Yokota and Noémie Goudal from their nodes.
+3. Open 伪档案、证据与被制造的真实 and inspect Fontcuberta, Walid Raad and Taryn Simon.
+4. Switch both topics to 并行比较 and compare their default pairs.
+Expected: The material topic distinguishes folding/logistics, reflective photograms, repeated chemical/material processing and water-soluble prints. The evidence topic distinguishes constructed scientific fiction, fictional institutional archives and real judicial photographic misidentification. Both default comparisons remain 并行比较 · 不认定直接影响 and every node exposes a source link and artist archive navigation.
+
+## Test 7 - Nature and photographic materials expansion
+Viewport: mobile (375x667)
+Covers: batch22 artist search, version distinctions, added existing projects, source links, existing archive preservation
+Description: Four new artists and material-process additions remain discoverable without replacing existing archives.
+Steps:
+1. Search Susan Derges and open her archive. Inspect The River Taw and The River Taw “Restored”.
+2. Search Meghann Riepenhoff and inspect Littoral Drift, Ecotone and Ice.
+3. Search Binh Danh and Jochen Lempert separately, opening their complete archives.
+4. Search Alison Rossiter and inspect Density, Fours and Pools plus her previous projects.
+5. Search Wolfgang Tillmans and inspect Silver / Silvers plus paper drop and Truth Study Center.
+6. Search zz-no-person-98765 and clear the query.
+Expected: Susan distinguishes original photograms from scanned and restored editions. Meghann has three projects. Binh's leaf printing differs from his daguerreotypes; Jochen's exhibition image is labeled as an exhibition view. Rossiter retains Expired photographic papers, Lament and Semblance and adds three process records. Tillmans retains previous projects and adds the Silver record with the MoMA date qualification. Every added project has a source link. An impossible search gives no artist results and clearing restores the list.
+
+## Test 8 - 2026 reverse-linked artist batch and archive completion
+Viewport: desktop (1280x800)
+Covers: batch23 artist search, 2026 trend-to-artist closure, archival and AI methods, colonial image research, existing artist extension
+Description: Artists already surfaced by the 2026 trend research now open into sourced making-process archives, while Meghann Riepenhoff retains her earlier projects and gains the 2026 Upwelling context.
+Steps:
+1. Search Lisa Oppenheim and open Monsieur Steichen; inspect archive, AI, dye-transfer and textile actions.
+2. Search Ayana V. Jackson and Sammy Baloji; inspect their self-performance and Katanga archive methods.
+3. Search Jordan Beal, Katia Kameli and Aman Alam; inspect Lineaments, The Algerian Novel and Ozymandias.
+4. Search Farah Al Qasimi and Akinbode Akinbiyi; inspect TAILSPIN and Sea Never Dry.
+5. Search Meghann Riepenhoff and inspect Upwelling alongside Littoral Drift, Ecotone and Ice.
+Expected: All eight new artists are searchable and labeled 本轮新增. Their project drawers describe concrete making actions and expose source links rather than generic themes. Lisa distinguishes archival source, AI generation and dye transfer; Jordan distinguishes negative corrosion from AI image research; Akinbiyi records walking, analog film and contact-sheet practice. Meghann retains all three prior projects and adds Upwelling as a sourced 2026 extension.
+
+## Test 9 - Venice historical year rosters
+Viewport: desktop (1280x800)
+Covers: Venice Biennale historical year directory, imported international-exhibition roster records, year-to-artist filtering
+Description: Historical Venice year selections use dedicated roster records rather than only incidental pre-existing artist links.
+Steps:
+1. Open Contemporary Art → Biennales → Venice.
+2. Select 2017, then 2019, 2022 and 2024.
+3. Open several newly indexed names from each year.
+Expected: Each year renders its imported international-exhibition roster records and newly indexed names remain searchable and clickable.
+
+## Test 12 - Other biennale participant rosters
+Viewport: desktop (1280x800)
+Covers: Gwangju Biennale 2024 roster, Sharjah Biennial 15 roster, Berlin Biennale 2025 roster, year-to-artist filtering
+Description: Non-Venice biennale pages use imported participant records instead of only one or two artists already present elsewhere in the database.
+Steps:
+1. Open Gwangju / 光州 and select 2024; inspect PANSORI and several participant records.
+2. Open Sharjah / 沙迦 and select 2023; inspect Thinking Historically in the Present and several participant records.
+3. Open Berlin / 柏林 and select 2025; inspect the roster and open Armin Linke plus another newly indexed participant.
+Expected: Each selected year renders a substantial dedicated participant roster, names open Artist records, and the indexed count is derived from the roster records rather than incidental archive matches.
+
+## Test 11 - Venice Biennale 2026 complete international roster [sanity]
+Viewport: desktop (1280x800)
+Covers: Venice Biennale 2026 international exhibition, complete 110-participant roster, artist navigation, available artwork images
+Description: The 61st Venice International Art Exhibition no longer shows only a handful of artists.
+Steps:
+1. Enter 当代艺术 and open Venice / 威尼斯.
+2. Select 2026 and open In Minor Keys.
+3. Inspect the roster count and search for Bodys Isek Kingelez, Sohrab Hura and Alfredo Jaar.
+4. Open Sohrab Hura and Alfredo Jaar.
+Expected: In Minor Keys reports 110 official participants and renders 110 linked participant records. Bodys Isek Kingelez is present. Sohrab Hura and Alfredo Jaar open artist records with sourced artwork images; records without verified images show no invented placeholder artwork. Selecting Venice 2026 or In Minor Keys clears unrelated search, method, subject, output, institution, circuit and saved-only filters so the visible artist result count is the full directory rather than an accidental filtered subset.
+
+## Test 9 - Family archive, migration and reconstructed memory batch
+Viewport: desktop (1280x800)
+Covers: batch24 artist search, photobook making processes, family archive lineage, migration-memory comparison, new artist archive navigation
+Description: Eight new artists are searchable as sourced archives and a new lineage compares how incomplete family histories are rebuilt without treating formal similarity as proof of direct influence.
+Steps:
+1. Search Widline Cadet, Eleonora Agostini and Hady Barry; inspect Ritual [Dis]Appearance, A Study on Waitressing and i am (not) your mother.
+2. Search Genesis Báez, Pia-Paulina Guilmoth and Pao Houa Her; inspect Holding Water, Flowers Drink the River and Pictures from Paradise.
+3. Search Soumya Sankar Bose and Sheida Soleimani; inspect Where the Birds Never Sing, Ghostwriter and Flyways.
+4. Open 创作脉络与并行比较, choose 家族档案、迁移与被重建的记忆, inspect all seven nodes and switch to 并行比较.
+Expected: All eight new artists are labeled 本轮新增 and expose concrete actions plus project sources. Hady records Risograph printing and hand-binding; Pia records 4×5 night shooting and natural-material staging; Pao records Google Maps route research and lenticular output; Sheida records physical studio construction before medium-format photography; Soumya distinguishes oral history and reenactment from documentary evidence. The new lineage contains Lebohang Kganye, Sim Chi Yin, Widline Cadet, Sheida Soleimani, Pao Houa Her, Hady Barry and Genesis Báez, and its comparison state remains 并行比较 · 不认定直接影响.
+
+## Test 12 - Separate research pages, ranked institutions and expanded MoMA [sanity]
+Viewport: desktop (1280x800)
+Covers: top-level page navigation, isolated research sections, ranked exhibition and photography institutions, expanded MoMA directory
+Description: The six primary research areas behave like separate pages instead of one long stacked page, while institution directories expose importance ordering and a richer MoMA research entry.
+Steps:
+1. Use the header to open 艺术家, 领域目录, 创作脉络, 趋势雷达, 策展人 and 机构 / 奖项 in turn.
+2. In 领域目录 choose 当代摄影 → 展览 / 摄影机构 and inspect the ordering and importance labels; then choose 当代艺术 → 美术馆 / 展览机构.
+3. Open MoMA and inspect Collection, Photography Department, Exhibitions & Events and MoMA PS1; also inspect MoMA · New Photography from the photography exhibition directory.
+Expected: Only the selected primary research page is rendered at a time. Photography exhibitions/institutions and art museums are sorted by research importance with visible grade/rank labels. MoMA distinguishes collection, Photography Department, New Photography, Projects/exhibitions and MoMA PS1 rather than treating all MoMA appearances as equivalent.
+
+## Test 13 - FotoFest Biennial edition rosters
+Viewport: desktop (1280x800)
+Covers: FotoFest Biennial directory, edition-year artist rosters, canonical artist filtering
+Description: FotoFest behaves like the other photography festivals with verified central-exhibition rosters by edition.
+Steps:
+1. Enter 当代摄影 → 摄影节 / 双年展 and open FotoFest Biennial.
+2. Select 2014, 2016, 2018, 2020, 2022 and 2024 in turn.
+3. Inspect the main ARTISTS list and open several known artists such as Sohrab Hura, Zanele Muholi, Gauri Gill and Binh Danh.
+Expected: Each populated FotoFest year filters the same main ARTISTS column to that edition’s verified central-exhibition roster, without duplicate artist identities.

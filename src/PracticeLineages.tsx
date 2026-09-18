@@ -373,13 +373,13 @@ export function PracticeLineages({ onOpenArtist }: { onOpenArtist: (artist: Arti
         {topics.map(item => <button key={item.id} aria-pressed={topicId === item.id} onClick={() => {
           setTopicId(item.id);
           setPair(defaultPair(item.id));
-        }}>{item.title}<small>{item.nodes.length} 个作品节点</small></button>)}
+        }} data-appdeploy-source-id="src_da93ee86ec7078d6850b7bc5cf48b699">{item.title}<small>{item.nodes.length} 个作品节点</small></button>)}
       </div>
       <div className="lineage-toolbar">
         <p>{topic.subtitle}</p>
         <div aria-label="专题查看方式">
-          <button aria-pressed={view === 'timeline'} onClick={() => setView('timeline')}>按年梳理</button>
-          <button aria-pressed={view === 'parallel'} onClick={() => setView('parallel')}>并行比较</button>
+          <button aria-pressed={view === 'timeline'} onClick={() => setView('timeline')} data-appdeploy-source-id="src_caa25ae2c21c06d7777e069bf7e21ea8">按年梳理</button>
+          <button aria-pressed={view === 'parallel'} onClick={() => setView('parallel')} data-appdeploy-source-id="src_c8c6983730d4ddb54c5826b09b12da44">并行比较</button>
         </div>
       </div>
       {view === 'timeline' ? (
@@ -388,9 +388,9 @@ export function PracticeLineages({ onOpenArtist }: { onOpenArtist: (artist: Arti
           {topic.id === 'self' && <aside className="lineage-evidence">
             <strong>目前标记两条可直接核查的回应关系</strong>
             <p>Cahun（1927）→ Wearing（2012）；Sherman（1977–1980）→ Morimura（1998）。其余节点保持“方法并置”，不把相似自动写成影响。</p>
-            <a href="https://www.npg.org.uk/collections/search/portrait/mw308918/Gillian-Wearing-Me-as-Cahun-Holding-a-Mask-of-My-Face" target="_blank" rel="noreferrer">Cahun / Wearing · NPG ↗</a>
+            <a href="https://www.npg.org.uk/collections/search/portrait/mw308918/Gillian-Wearing-Me-as-Cahun-Holding-a-Mask-of-My-Face" target="_blank" rel="noreferrer" data-appdeploy-source-id="src_0d7150e46a47b4aed457446e62c41907">Cahun / Wearing · NPG ↗</a>
             {' · '}
-            <a href="https://www.luhringaugustine.com/artists/yasumasa-morimura/artworks/actresses?view=slider" target="_blank" rel="noreferrer">Sherman / Morimura · 作品档案 ↗</a>
+            <a href="https://www.luhringaugustine.com/artists/yasumasa-morimura/artworks/actresses?view=slider" target="_blank" rel="noreferrer" data-appdeploy-source-id="src_b9d3d6d66a1a186de4102d2510d04886">Sherman / Morimura · 作品档案 ↗</a>
           </aside>}
           <ol className="lineage-timeline">
             {topic.nodes.map(node => <li key={node.id}>
@@ -400,7 +400,7 @@ export function PracticeLineages({ onOpenArtist }: { onOpenArtist: (artist: Arti
                 <h3>{node.title}</h3>
                 <p>{node.action}</p>
                 <div className="lineage-meta"><span>材料：{node.material}</span><span>呈现：{node.result}</span></div>
-                <footer><button onClick={() => openArtist(node.artistId)}>打开艺术家档案</button><a href={node.source} target="_blank" rel="noreferrer">作品依据 ↗</a></footer>
+                <footer><button onClick={() => openArtist(node.artistId)} data-appdeploy-source-id="src_40a0f1ab25dc1bc919e4fc51e54d9222">打开艺术家档案</button><a href={node.source} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_229c25af5e483764921adc61d417ded4">作品依据 ↗</a></footer>
               </article>
             </li>)}
           </ol>
@@ -413,7 +413,7 @@ export function PracticeLineages({ onOpenArtist }: { onOpenArtist: (artist: Arti
                 const next: [string, string] = [...pair];
                 next[index] = event.target.value;
                 setPair(next);
-              }}>
+              }} data-appdeploy-source-id="src_ce133edecaa2c049fbb30cfb6bbf0d7e">
                 {topic.nodes.map(node => <option key={node.id} value={node.id} disabled={node.id === pair[index === 0 ? 1 : 0]}>{node.name} · {node.title}</option>)}
               </select>
             </label>)}
@@ -428,7 +428,7 @@ export function PracticeLineages({ onOpenArtist }: { onOpenArtist: (artist: Arti
               <b>{dimension.label}</b><p><small>A · {left.name}</small>{left[dimension.key]}</p><p><small>B · {right.name}</small>{right[dimension.key]}</p>
             </div>)}
           </div>
-          <div className="lineage-pair-links">{[left, right].map((node, index) => <div key={node.id}><button onClick={() => openArtist(node.artistId)}>打开 {index === 0 ? 'A' : 'B'} 的艺术家档案</button><a href={node.source} target="_blank" rel="noreferrer">核查作品来源 ↗</a></div>)}</div>
+          <div className="lineage-pair-links">{[left, right].map((node, index) => <div key={node.id}><button onClick={() => openArtist(node.artistId)} data-appdeploy-source-id="src_c100f9d590d1f1560648c6b010c09e18">打开 {index === 0 ? 'A' : 'B'} 的艺术家档案</button><a href={node.source} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_4572bdd927b3f3dce86505f584a42dcf">核查作品来源 ↗</a></div>)}</div>
         </div>
       )}
     </section>

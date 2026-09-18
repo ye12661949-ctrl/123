@@ -195,10 +195,12 @@ function App() {
     );
   };
 
+
+
   return (
     <div className="app-shell">
       <header className="site-header">
-        <a className="brand" href="#artists" aria-label="Practice Index home">
+        <a className="brand" href="#artists" aria-label="Practice Index home" data-appdeploy-source-id="src_81f0f14198f99f4c58d6c81364ee9c21">
           <span className="brand-mark">PI</span>
           <span>
             <strong>Practice Index</strong>
@@ -206,19 +208,19 @@ function App() {
           </span>
         </a>
         <nav className="research-nav" aria-label="研究层导航">
-          <a href="#artists">艺术家</a>
-          <a href="#fields">领域目录</a>
-          <a href="#lineages">创作脉络</a>
-          <a href="#trends">趋势雷达</a>
-          <a href="#curators">策展人</a>
-          <a href="#ecosystem">机构 / 奖项</a>
+          <a href="#artists" data-appdeploy-source-id="src_6346fa3bf3ba7d936b6aed9d970d04af">艺术家</a>
+          <a href="#fields" data-appdeploy-source-id="src_b80b594570880aff04615baa712f0644">领域目录</a>
+          <a href="#lineages" data-appdeploy-source-id="src_724d478cfbbc25e68f1d2c3dbccd086c">创作脉络</a>
+          <a href="#trends" data-appdeploy-source-id="src_6aafdcc1d232678a40834764ac972fcd">趋势雷达</a>
+          <a href="#curators" data-appdeploy-source-id="src_d3e0a4cc9c1d7efe43efc4bac0692c57">策展人</a>
+          <a href="#ecosystem" data-appdeploy-source-id="src_65de8b5ede72227381454e04903a9024">机构 / 奖项</a>
         </nav>
         <div className="header-meta">
           <span>{artists.length} 位艺术家 · 趋势数据更新至 2026.09</span>
           <button
             className="saved-pill"
             aria-pressed={showSaved}
-            onClick={() => { resetFilters(); setShowSaved(!showSaved); }}
+            onClick={() => { resetFilters(); setShowSaved(!showSaved); }} data-appdeploy-source-id="src_df98491eadcd501502c64ee5fc53b2b0"
           >
             <Bookmark size={15} /> {showSaved ? '返回全部' : '已收藏'} {savedIds.length}
           </button>
@@ -248,17 +250,17 @@ function App() {
             <input
               value={query}
               onChange={event => setQuery(event.target.value)}
-              placeholder="搜艺术家、项目、方法、概念、机构…"
+              placeholder="搜艺术家、项目、方法、概念、机构…" data-appdeploy-source-id="src_5bd459106ad71015514aa8d8f03e1008"
             />
             {query && (
-              <button aria-label="清空搜索" onClick={() => setQuery('')}>
+              <button aria-label="清空搜索" onClick={() => setQuery('')} data-appdeploy-source-id="src_25cf82b3e012125394ad69cf272a95f8">
                 <X size={16} />
               </button>
             )}
           </label>
           <button
             className="mobile-filter-button"
-            onClick={() => setMobileFiltersOpen(true)}
+            onClick={() => setMobileFiltersOpen(true)} data-appdeploy-source-id="src_db03f3d291c3a7507e6ff07fe24e8c51"
           >
             <SlidersHorizontal size={17} /> 筛选{' '}
             {activeFilterCount > 0 && <b>{activeFilterCount}</b>}
@@ -275,7 +277,7 @@ function App() {
           <aside className={`filters ${mobileFiltersOpen ? 'is-open' : ''}`}>
             <div className="filter-mobile-head">
               <strong>筛选器</strong>
-              <button onClick={() => setMobileFiltersOpen(false)}>
+              <button onClick={() => setMobileFiltersOpen(false)} data-appdeploy-source-id="src_52c78e44b5620bb940ac012a62361983">
                 <X />
               </button>
             </div>
@@ -284,7 +286,7 @@ function App() {
                 <Filter size={15} /> 多维筛选
               </span>
               {activeFilterCount > 0 && (
-                <button onClick={resetFilters}>全部清除</button>
+                <button onClick={resetFilters} data-appdeploy-source-id="src_d043f70f05de37d4145e2267c680eb52">全部清除</button>
               )}
             </div>
             <FilterSection
@@ -319,7 +321,7 @@ function App() {
             />
             <button
               className="apply-mobile"
-              onClick={() => setMobileFiltersOpen(false)}
+              onClick={() => setMobileFiltersOpen(false)} data-appdeploy-source-id="src_bd836097442920a390be2b93ac273ae0"
             >
               查看 {filteredArtists.length} 位艺术家
             </button>
@@ -352,7 +354,7 @@ function App() {
                       tabIndex={0}
                       onKeyDown={event =>
                         event.key === 'Enter' && setActiveArtist(artist)
-                      }
+                      } data-appdeploy-source-id="src_bd9976f0a30b81b59f3d9166380a148e"
                     >
                       <div className="artist-name-row">
                         <div>
@@ -403,7 +405,7 @@ function App() {
                             : 'icon-button'
                         }
                         onClick={() => toggleSaved(artist.id)}
-                        aria-label="收藏艺术家"
+                        aria-label="收藏艺术家" data-appdeploy-source-id="src_9fe6ae8313f065ebb796613a837c00bc"
                       >
                         <Bookmark
                           size={17}
@@ -424,7 +426,7 @@ function App() {
                         disabled={
                           !compareIds.includes(artist.id) &&
                           compareIds.length >= 3
-                        }
+                        } data-appdeploy-source-id="src_600672b74b5606d44febed142885d56b"
                       >
                         <GitCompareArrows size={15} />{' '}
                         {compareIds.includes(artist.id) ? '已加入' : '对比'}
@@ -436,7 +438,7 @@ function App() {
             ) : (
               <div className="empty-state">
                 <p>{showSaved ? '当前收藏中没有符合条件的艺术家。点击艺术家旁的书签即可收藏。' : '这个交叉条件下还没有艺术家。'}</p>
-                <button onClick={resetFilters}>清除筛选，回到全部条目</button>
+                <button onClick={resetFilters} data-appdeploy-source-id="src_57c1f03d3d1153205415aa8e033bf217">清除筛选，回到全部条目</button>
               </div>
             )}
           </section>
@@ -476,13 +478,13 @@ function App() {
             ))}
           </div>
           <div>
-            <button className="text-button" onClick={() => setCompareIds([])}>
+            <button className="text-button" onClick={() => setCompareIds([])} data-appdeploy-source-id="src_482ffd81cfe908a9cd1715517d125fe2">
               清空
             </button>
             <button
               className="primary-button"
               onClick={() => setShowCompare(true)}
-              disabled={compareIds.length < 2}
+              disabled={compareIds.length < 2} data-appdeploy-source-id="src_fa0b4be3475e25281c2e31a8238ada7f"
             >
               开始对比 ({compareIds.length}/3)
             </button>
@@ -519,10 +521,10 @@ function TrendDashboard() {
       </div>
       <div className="trend-toolbar">
         <div><span>TREND TRACKERS</span><strong>{visible.length}</strong></div>
-        <div className="kind-tabs">{kinds.map(item => <button key={item} className={kind === item ? 'active' : ''} onClick={() => setKind(item)}>{item}</button>)}</div>
+        <div className="kind-tabs">{kinds.map(item => <button key={item} className={kind === item ? 'active' : ''} onClick={() => setKind(item)} data-appdeploy-source-id="src_0364d579b938421300869badaa35f65e">{item}</button>)}</div>
       </div>
       <div className="trend-list">
-        {visible.map(item => <details className="trend-card" key={item.id}><summary><div><span>{item.kind} · {item.window}</span><h3>{item.name}</h3><p>{item.entryMode}</p></div><div className="trend-scale"><b>{item.scale}</b><span>展开分析 +</span></div></summary><div className="trend-card-body"><div className="trajectory"><h4>近年轨迹</h4>{item.trajectory.map(point => <div key={point.year}><b>{point.year}</b><p>{point.signal}</p></div>)}</div><div className="signal-columns"><div><h4>硬信号 / 官方材料能确认</h4>{item.hardSignals.map(signal => <p key={signal}>◆ {signal}</p>)}</div><div><h4>趋势归纳 / 不是官方口径</h4>{item.synthesis.map(signal => <p key={signal}>— {signal}</p>)}</div><div className="reality-box"><h4>现实情况 / 对投稿意味着什么</h4>{item.reality.map(signal => <p key={signal}>! {signal}</p>)}</div></div><div className="watch-row"><b>顺着这一机构继续看：</b>{item.watchNames.map(name => <span key={name}>{name}</span>)}</div><div className="source-row">{item.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} <ExternalLink size={12} /></a>)}</div></div></details>)}
+        {visible.map(item => <details className="trend-card" key={item.id}><summary data-appdeploy-source-id="src_2c5bda732ca054429d1d865346ec75f1"><div><span>{item.kind} · {item.window}</span><h3>{item.name}</h3><p>{item.entryMode}</p></div><div className="trend-scale"><b>{item.scale}</b><span>展开分析 +</span></div></summary><div className="trend-card-body"><div className="trajectory"><h4>近年轨迹</h4>{item.trajectory.map(point => <div key={point.year}><b>{point.year}</b><p>{point.signal}</p></div>)}</div><div className="signal-columns"><div><h4>硬信号 / 官方材料能确认</h4>{item.hardSignals.map(signal => <p key={signal}>◆ {signal}</p>)}</div><div><h4>趋势归纳 / 不是官方口径</h4>{item.synthesis.map(signal => <p key={signal}>— {signal}</p>)}</div><div className="reality-box"><h4>现实情况 / 对投稿意味着什么</h4>{item.reality.map(signal => <p key={signal}>! {signal}</p>)}</div></div><div className="watch-row"><b>顺着这一机构继续看：</b>{item.watchNames.map(name => <span key={name}>{name}</span>)}</div><div className="source-row">{item.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_ef3e9704f90ae93c05ba69aade40e8cc">{source.label} <ExternalLink size={12} /></a>)}</div></div></details>)}
       </div>
     </section>
   );
@@ -534,7 +536,7 @@ function CuratorDashboard() {
       <div className="intelligence-hero"><div><p className="eyebrow">CURATORIAL LENSES</p><h2>策展人地图</h2></div><p>先看关系，再读文字：策展人与机构、展览和彼此共享的策展生态会用线连接。虚线只表示研究 / 制度交叉，不把同行关系误写成私人关系。</p></div>
       <CuratorNetworkMap />
       <div className="curator-grid">
-        {curatorProfiles.map(curator => <details className="curator-card" key={curator.id}><summary><span>{curator.geography}</span><h3>{curator.name}</h3><p>{curator.role}</p><div className="curator-tags">{curator.focus.slice(0, 4).map(tag => <em key={tag}>{tag}</em>)}</div></summary><div className="curator-body"><h4>从履历里能确认</h4>{curator.trackRecord.map(item => <p key={item}>◆ {item}</p>)}<h4>我怎么读他的/她的策展逻辑</h4><p>{curator.reading}</p><h4>对艺术家最现实的启发</h4><p>{curator.practical}</p><p className="caution"><b>别误读：</b>{curator.caution}</p><CuratorRelations curatorId={curator.id} /><div className="source-row">{curator.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer">{source.label} <ExternalLink size={12} /></a>)}</div></div></details>)}
+        {curatorProfiles.map(curator => <details className="curator-card" key={curator.id}><summary data-appdeploy-source-id="src_8e7d52262dba61eb95fd2cbc6748a7c0"><span>{curator.geography}</span><h3>{curator.name}</h3><p>{curator.role}</p><div className="curator-tags">{curator.focus.slice(0, 4).map(tag => <em key={tag}>{tag}</em>)}</div></summary><div className="curator-body"><h4>从履历里能确认</h4>{curator.trackRecord.map(item => <p key={item}>◆ {item}</p>)}<h4>我怎么读他的/她的策展逻辑</h4><p>{curator.reading}</p><h4>对艺术家最现实的启发</h4><p>{curator.practical}</p><p className="caution"><b>别误读：</b>{curator.caution}</p><CuratorRelations curatorId={curator.id} /><div className="source-row">{curator.sources.map(source => <a key={source.url} href={source.url} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_bde7dc39394e1c3a559bd38ce7be8af2">{source.label} <ExternalLink size={12} /></a>)}</div></div></details>)}
       </div>
     </section>
   );
@@ -559,7 +561,7 @@ function FilterSection({
           <button
             key={item}
             onClick={() => onToggle(item)}
-            className={selected.includes(item) ? 'selected' : ''}
+            className={selected.includes(item) ? 'selected' : ''} data-appdeploy-source-id="src_6b972edcb7fd9ed982ca54878b9a8ac6"
           >
             {selected.includes(item) && <Check size={12} />}
             {item}
@@ -602,7 +604,7 @@ function ArtistDrawer({
       <article className="drawer">
         <div className="drawer-topbar">
           <span>ARTIST FILE / {artist.born}</span>
-          <button onClick={onClose} aria-label="关闭">
+          <button onClick={onClose} aria-label="关闭" data-appdeploy-source-id="src_80b692c2dc87114504ca54e328ea4eb8">
             <X />
           </button>
         </div>
@@ -613,11 +615,11 @@ function ArtistDrawer({
             {artist.chineseName && <span>{artist.chineseName}</span>}
           </div>
           <div className="drawer-actions">
-            <button onClick={onSave} className={saved ? 'active' : ''}>
+            <button onClick={onSave} className={saved ? 'active' : ''} data-appdeploy-source-id="src_e5a2639bb883baf9269957b7af9c7a88">
               <Bookmark size={16} fill={saved ? 'currentColor' : 'none'} />
               {saved ? '已收藏' : '收藏'}
             </button>
-            <button onClick={onCompare} className={compared ? 'active' : ''}>
+            <button onClick={onCompare} className={compared ? 'active' : ''} data-appdeploy-source-id="src_0e6c61c9e37074687e5e81229c01c734">
               <GitCompareArrows size={16} />
               {compared ? '已加入对比' : '加入对比'}
             </button>
@@ -643,7 +645,7 @@ function ArtistDrawer({
               <p className="archive-note">按具体届次与实际参展身份记录；威尼斯区分国际主展与国家馆，其他双年展按其真实策展结构记录。</p>
               <div className="participation-records">
                 {biennaleSignals.map(entry => (
-                  <a key={entry.id} href={entry.sourceUrl} target="_blank" rel="noreferrer">
+                  <a key={entry.id} href={entry.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_305f1602184cf5b92e6ea5b7db6237da">
                     <b>{entry.year} · {entry.eventName}{entry.country ? ` · ${entry.country}` : ''}</b>
                     <span>{entry.section} · {entry.title}</span>
                     <small>查看参展来源 ↗</small>
@@ -754,7 +756,7 @@ function ArtistDrawer({
               className="source-link"
               href={artist.sourceUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noreferrer" data-appdeploy-source-id="src_04c0956ab9cda0de37910d3a463fe515"
             >
               查看主要资料来源：{artist.sourceLabel} <ExternalLink size={14} />
             </a>
@@ -769,7 +771,7 @@ function ArtistDrawer({
             <textarea
               value={note}
               onChange={event => onNote(event.target.value)}
-              placeholder="例如：这个项目真正让我感兴趣的不是题材，而是它如何把家庭档案变成空间；可以和我的某个项目比较……"
+              placeholder="例如：这个项目真正让我感兴趣的不是题材，而是它如何把家庭档案变成空间；可以和我的某个项目比较……" data-appdeploy-source-id="src_970f32782e5da4f2a0c4ae347645bb81"
             />
             <small>笔记只保存在当前浏览器。</small>
           </div>
@@ -794,9 +796,9 @@ function ArtworkFigure({ item }: { item: Artist['images'][number] }) {
   return (
     <figure className="artwork-figure">
       <div className="artwork-image-frame">
-        {failed ? <div className="image-fallback"><span>图片外链暂时不可用</span><a href={item.sourceUrl} target="_blank" rel="noreferrer">到来源页面查看 <ExternalLink size={13} /></a></div> : <img src={item.url} alt={item.title} loading="lazy" referrerPolicy="no-referrer" onError={() => setFailed(true)} />}
+        {failed ? <div className="image-fallback"><span>图片外链暂时不可用</span><a href={item.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_5654a8e46e9c02a85a5dc10f2be2c2c0">到来源页面查看 <ExternalLink size={13} /></a></div> : <img src={item.url} alt={item.title} loading="lazy" referrerPolicy="no-referrer" onError={() => setFailed(true)} />}
       </div>
-      <figcaption><b>{item.title}</b><span>{item.credit}</span><a href={item.sourceUrl} target="_blank" rel="noreferrer">图片来源：{item.sourceLabel} <ExternalLink size={12} /></a></figcaption>
+      <figcaption><b>{item.title}</b><span>{item.credit}</span><a href={item.sourceUrl} target="_blank" rel="noreferrer" data-appdeploy-source-id="src_c1ef58d31346200c7bb2d8ed03369d95">图片来源：{item.sourceLabel} <ExternalLink size={12} /></a></figcaption>
     </figure>
   );
 }
@@ -850,7 +852,7 @@ function RelatedPractices({ artist, onOpen }: { artist: Artist; onOpen: (artist:
           {relatedArtists(artist, group.mode).map(match => {
             const shared = group.mode === 'method' ? match.sharedMethods : match.sharedSubjects;
             return (
-              <button className="related-card" key={`${group.mode}-${match.artist.id}`} onClick={() => onOpen(match.artist)}>
+              <button className="related-card" key={`${group.mode}-${match.artist.id}`} onClick={() => onOpen(match.artist)} data-appdeploy-source-id="src_5c970b5feb690af53f10a34c2e97387e">
                 <strong>{match.artist.name}</strong>
                 <p>{shared.slice(0, 3).join(' · ') || match.artist.methods[0]}</p>
                 <ChevronRight size={15} />
@@ -886,7 +888,7 @@ function ComparePanel({
       <section className="compare-panel">
         <div className="drawer-topbar">
           <span>COMPARE / 方法横向对照</span>
-          <button onClick={onClose}>
+          <button onClick={onClose} data-appdeploy-source-id="src_5cea5c72e5c010b82e8ecd2c037e26fb">
             <X />
           </button>
         </div>
