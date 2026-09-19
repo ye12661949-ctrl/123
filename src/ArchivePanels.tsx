@@ -12,6 +12,7 @@ import { archiveBatch34 } from './archiveBatch34';
 import { archiveBatch35 } from './archiveBatch35';
 import { archiveBatch36 } from './archiveBatch36';
 import { archiveBatch37 } from './archiveBatch37';
+import { archiveBatch38 } from './archiveBatch38';
 import { awards, curatorNetworks, institutions } from './ecosystemData';
 import { InstitutionHierarchy } from './ResearchMaps';
 
@@ -32,7 +33,7 @@ function ArchiveImageFigure({ image }: { image: ArchiveImage }) {
 }
 
 export function CompleteArtistArchive({ artist }: { artist: Artist }) {
-  const deepArchive = archiveBatch37[artist.id] ?? archiveBatch36[artist.id] ?? archiveBatch35[artist.id] ?? archiveBatch34[artist.id] ?? archiveBatch33[artist.id] ?? archiveBatch32[artist.id] ?? archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
+  const deepArchive = archiveBatch38[artist.id] ?? archiveBatch37[artist.id] ?? archiveBatch36[artist.id] ?? archiveBatch35[artist.id] ?? archiveBatch34[artist.id] ?? archiveBatch33[artist.id] ?? archiveBatch32[artist.id] ?? archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
   const archive = deepArchive ?? {
     artistId: artist.id,
     projectCoverage: `${artist.projects.length} 个第一轮项目索引 · 待继续补全`,
