@@ -3,6 +3,7 @@ import { ExternalLink } from 'lucide-react';
 import type { Artist } from './data';
 import { artistArchives, type ArchiveImage } from './archiveData';
 import { archiveBatch28 } from './archiveBatch28';
+import { archiveBatch29 } from './archiveBatch29';
 import { awards, curatorNetworks, institutions } from './ecosystemData';
 import { InstitutionHierarchy } from './ResearchMaps';
 
@@ -23,7 +24,7 @@ function ArchiveImageFigure({ image }: { image: ArchiveImage }) {
 }
 
 export function CompleteArtistArchive({ artist }: { artist: Artist }) {
-  const deepArchive = archiveBatch28[artist.id] ?? artistArchives[artist.id];
+  const deepArchive = archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
   const archive = deepArchive ?? {
     artistId: artist.id,
     projectCoverage: `${artist.projects.length} 个第一轮项目索引 · 待继续补全`,
