@@ -6,6 +6,7 @@ import { archiveBatch28 } from './archiveBatch28';
 import { archiveBatch29 } from './archiveBatch29';
 import { archiveBatch30 } from './archiveBatch30';
 import { archiveBatch31 } from './archiveBatch31';
+import { archiveBatch32 } from './archiveBatch32';
 import { awards, curatorNetworks, institutions } from './ecosystemData';
 import { InstitutionHierarchy } from './ResearchMaps';
 
@@ -26,7 +27,7 @@ function ArchiveImageFigure({ image }: { image: ArchiveImage }) {
 }
 
 export function CompleteArtistArchive({ artist }: { artist: Artist }) {
-  const deepArchive = archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
+  const deepArchive = archiveBatch32[artist.id] ?? archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
   const archive = deepArchive ?? {
     artistId: artist.id,
     projectCoverage: `${artist.projects.length} 个第一轮项目索引 · 待继续补全`,
