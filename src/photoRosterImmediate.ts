@@ -1,4 +1,5 @@
 import type { Artist } from './data';
+import { artistBatch27 } from './expansionBatch27';
 
 const source2024 = 'https://www.deutsche-boerse.com/dbg-en/media/news-stories/press-releases/Lebohang-Kganye-wins-the-Deutsche-B-rse-Photography-Foundation-Prize-2024-3968426';
 
@@ -8,7 +9,7 @@ const records = [
   ['hrair-sarkissian', 'Hrair Sarkissian', 'London / Damascus', '入围']
 ] as const;
 
-export const photoRosterImmediateArtists: Artist[] = records.map(([id, name, base, status]) => ({
+const rosterArtists: Artist[] = records.map(([id, name, base, status]) => ({
   id,
   name,
   born: '—',
@@ -25,3 +26,5 @@ export const photoRosterImmediateArtists: Artist[] = records.map(([id, name, bas
   sourceLabel: 'Deutsche Börse Photography Foundation · 2024',
   sourceUrl: source2024
 }));
+
+export const photoRosterImmediateArtists: Artist[] = [...artistBatch27, ...rosterArtists];
