@@ -24,6 +24,7 @@ import { archiveBatch46 } from './archiveBatch46';
 import { archiveBatch47 } from './archiveBatch47';
 import { archiveBatch48 } from './archiveBatch48';
 import { archiveBatch49 } from './archiveBatch49';
+import { archiveBatch50 } from './archiveBatch50';
 import { awards, curatorNetworks, institutions } from './ecosystemData';
 import { InstitutionHierarchy } from './ResearchMaps';
 
@@ -44,7 +45,7 @@ function ArchiveImageFigure({ image }: { image: ArchiveImage }) {
 }
 
 export function CompleteArtistArchive({ artist }: { artist: Artist }) {
-  const deepArchive = archiveBatch49[artist.id] ?? archiveBatch48[artist.id] ?? archiveBatch47[artist.id] ?? archiveBatch46[artist.id] ?? archiveBatch45[artist.id] ?? archiveBatch44[artist.id] ?? archiveBatch43[artist.id] ?? archiveBatch42[artist.id] ?? archiveBatch41[artist.id] ?? archiveBatch40[artist.id] ?? archiveBatch39[artist.id] ?? archiveBatch38[artist.id] ?? archiveBatch37[artist.id] ?? archiveBatch36[artist.id] ?? archiveBatch35[artist.id] ?? archiveBatch34[artist.id] ?? archiveBatch33[artist.id] ?? archiveBatch32[artist.id] ?? archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
+  const deepArchive = archiveBatch50[artist.id] ?? archiveBatch49[artist.id] ?? archiveBatch48[artist.id] ?? archiveBatch47[artist.id] ?? archiveBatch46[artist.id] ?? archiveBatch45[artist.id] ?? archiveBatch44[artist.id] ?? archiveBatch43[artist.id] ?? archiveBatch42[artist.id] ?? archiveBatch41[artist.id] ?? archiveBatch40[artist.id] ?? archiveBatch39[artist.id] ?? archiveBatch38[artist.id] ?? archiveBatch37[artist.id] ?? archiveBatch36[artist.id] ?? archiveBatch35[artist.id] ?? archiveBatch34[artist.id] ?? archiveBatch33[artist.id] ?? archiveBatch32[artist.id] ?? archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
   const archive = deepArchive ?? {
     artistId: artist.id,
     projectCoverage: `${artist.projects.length} 个第一轮项目索引 · 待继续补全`,
