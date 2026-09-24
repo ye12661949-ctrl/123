@@ -269,8 +269,8 @@ function App() {
 
         <FieldDirectory onOpenArtist={setActiveArtist} biennaleSelection={biennaleSelection} onBiennaleSelect={selection => { setDirectoryArtistIds(null); setBiennaleSelection(selection); if (selection) { setQuery(''); setFilters({ methods: [], subjects: [], outputs: [], institutions: [] }); setCircuitFilters([]); setShowSaved(false); } }} onDirectoryArtistsSelect={ids => { setBiennaleSelection(null); setDirectoryArtistIds(ids); setQuery(''); setFilters({ methods: [], subjects: [], outputs: [], institutions: [] }); setCircuitFilters([]); setShowSaved(false); }} onDomainSelect={scope => { setDomainScope(scope); setDirectoryArtistIds(null); setBiennaleSelection(null); setQuery(''); setFilters({ methods: [], subjects: [], outputs: [], institutions: [] }); setCircuitFilters([]); setShowSaved(false); }} />
         <div className="research-update-note">
-          <strong>本轮更新 · 09.15</strong>
-<span>新增 17 位艺术家与 20 个项目记录。Prix Pictet Human 第十届 12 位入围者现已全部关联档案；惠特尼 2024 新增 8 位关联艺术家。完善 Vasantha Yogananthan 与 Isaac Julien 的项目资料，增加逐届名单搜索，区分创作、展出和获奖年份。</span>
+          <strong>本轮更新 · 09.24</strong>
+          <span>完善 Akshay Mahajan、Amin Yousefi、Shwe Wutt Hmon、Daniel Mebarek 与 Nazanin Hafez 五位艺术家的重点项目：补充具体制作动作、逐项来源和每组两张图像，可从 Foam Talent 对应届次进入。</span>
         </div>
 
         <div className="content-grid">
