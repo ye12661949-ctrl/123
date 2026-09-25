@@ -269,8 +269,8 @@ function App() {
 
         <FieldDirectory onOpenArtist={setActiveArtist} biennaleSelection={biennaleSelection} onBiennaleSelect={selection => { setDirectoryArtistIds(null); setBiennaleSelection(selection); if (selection) { setQuery(''); setFilters({ methods: [], subjects: [], outputs: [], institutions: [] }); setCircuitFilters([]); setShowSaved(false); } }} onDirectoryArtistsSelect={ids => { setBiennaleSelection(null); setDirectoryArtistIds(ids); setQuery(''); setFilters({ methods: [], subjects: [], outputs: [], institutions: [] }); setCircuitFilters([]); setShowSaved(false); }} onDomainSelect={scope => { setDomainScope(scope); setDirectoryArtistIds(null); setBiennaleSelection(null); setQuery(''); setFilters({ methods: [], subjects: [], outputs: [], institutions: [] }); setCircuitFilters([]); setShowSaved(false); }} />
         <div className="research-update-note">
-          <strong>本轮更新 · 09.24</strong>
-          <span>完善 Akshay Mahajan、Amin Yousefi、Shwe Wutt Hmon、Daniel Mebarek 与 Nazanin Hafez 五位艺术家的重点项目：补充具体制作动作、逐项来源和每组两张图像，可从 Foam Talent 对应届次进入。</span>
+          <strong>本轮更新 · 09.25</strong>
+          <span>继续完善 Cristóbal Ascencio、Sheung Yiu 与 Rehab Eldalil：补充 3 个重点项目、7 张有来源的作品图，以及数据弯折、面部扫描、社群协作等具体创作方法。可从 Foam Talent 2024–2025 名单进入；此前五位艺术家的更新仍保留。</span>
         </div>
 
         <div className="content-grid">
