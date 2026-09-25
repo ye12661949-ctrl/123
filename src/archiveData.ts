@@ -1,3 +1,4 @@
+import { foamResearchArchives } from './foamResearchBatch';
 import { foamFocusArchives } from './foamFocusBatch';
 import { archiveBatch25 } from './biennaleExpansion25';
 import { archiveBatch24 } from './expansionBatch24';
@@ -243,6 +244,7 @@ const combinedArtistArchives: Record<string, ArtistArchive> = {
   ...archiveBatch24,
   ...archiveBatch25,
   ...foamFocusArchives,
+  ...foamResearchArchives,
 };
 
 export const artistArchives: Record<string, ArtistArchive> = Object.fromEntries(
