@@ -3,6 +3,7 @@ import { foamTalent2016DeepArtists } from './foamTalent2016Deep';
 import { foamTalent2016DeepArtists2 } from './foamTalent2016Deep2';
 import { foamTalent2016DeepArtists3 } from './foamTalent2016Deep3';
 import { foamTalent2016DeepArtists4 } from './foamTalent2016Deep4';
+import { foamTalent2016DeepArtists5 } from './foamTalent2016Deep5';
 
 const source = 'https://www.foam.org/events/foam-talent-2016';
 const rosterSource = 'https://www.foam.org/nl/events/foam-talent-2017-new-york';
@@ -54,6 +55,6 @@ const rosterArtists: Artist[] = records.map(([id,name,base,method,subject]) => (
 }));
 
 // Deep profiles come first so the global name/id de-duplication in data.ts keeps the researched version.
-export const foamTalent2016Artists: Artist[] = [...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
+export const foamTalent2016Artists: Artist[] = [...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
 
 export const foamTalent2016Source = source;
