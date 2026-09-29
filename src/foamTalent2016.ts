@@ -1,4 +1,5 @@
 import type { Artist } from './data';
+import { foamTalent2016DeepArtists } from './foamTalent2016Deep';
 
 const source = 'https://www.foam.org/events/foam-talent-2016';
 const rosterSource = 'https://www.foam.org/nl/events/foam-talent-2017-new-york';
@@ -31,7 +32,7 @@ export const foamTalent2016ArtistIds = [
   'sofia-ayarzagoitia','juno-calypso','bubi-canal','paolo-ciregia','sam-contis','jack-davison','nicolo-degiorgis','katinka-goldberg','andrea-grutzner','samuel-gratacap','maxime-guyon','felicity-hammond','alexandra-hunts','taejoong-kim','nico-krijno','leo-maguire','stefanie-moshammer','andres-felipe-orjuela','antonio-ottomanelli','daan-paans','louise-parker','andrejs-strokins','ilona-szwarc','daisuke-yokota'
 ];
 
-export const foamTalent2016Artists: Artist[] = records.map(([id,name,base,method,subject]) => ({
+const rosterArtists: Artist[] = records.map(([id,name,base,method,subject]) => ({
   id,
   name,
   born:'—',
@@ -48,5 +49,8 @@ export const foamTalent2016Artists: Artist[] = records.map(([id,name,base,method
   sourceLabel:'Foam · 2016 Talent roster',
   sourceUrl:rosterSource
 }));
+
+// Deep profiles come first so the global name/id de-duplication in data.ts keeps the researched version.
+export const foamTalent2016Artists: Artist[] = [...foamTalent2016DeepArtists, ...rosterArtists];
 
 export const foamTalent2016Source = source;
