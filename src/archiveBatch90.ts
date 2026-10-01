@@ -1,0 +1,298 @@
+import type { ArtistArchive, ArchiveRelation } from './archiveData';
+
+const rel = (kind: ArchiveRelation['kind'], label: string, detail?: string): ArchiveRelation => ({ kind, label, detail });
+
+const agarVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/eileen-agar';
+const cahunVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/claude-cahun';
+const colquhounVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/ithell-colquhoun';
+const jonesVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/lo%C3%AFs-mailou-jones';
+const ramaVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/carol-rama';
+const tanningVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/dorothea-tanning';
+
+export const archiveBatch90: Record<string, ArtistArchive> = {
+  'venice-eileen-agar': {
+    artistId: 'venice-eileen-agar',
+    projectCoverage: '3 个 rock-photo / wearable assemblage / organic painting 节点已建立深档案 · 1936–1960s',
+    imageCoverage: '0 / 3 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Agar 的 Surrealism 不只来自梦境，而来自“把普通自然物看错”的能力：岩石像身体、帽子像海鲜汤、牙齿像地景。幽默、collecting 与 assemblage 是她的重要方法。',
+    projects: [
+      {
+        title: 'Bum and Thumb Rock',
+        cluster: 'black-and-white photograph / anthropomorphic geology / visual pun',
+        period: '1936',
+        summary: 'Agar 在法国 Ploumanac’h 拍摄一块奇形岩石，并把其曲面读成 human behind / thumb。地质形态因为命名与 framing 被转化为身体笑话，建立她后来反复使用的 uncanny humour。',
+        actions: [
+          '在 coastal landscape 中主动寻找具有 anthropomorphic potential 的 rock formation',
+          '用 black-and-white photography 固定自然表面，而不通过 collage 后期制造效果',
+          '通过 title 把观看方向从 geology 推向 body association',
+          '利用 scale ambiguity 让 rock 同时像巨大 landscape 与局部 flesh',
+        ],
+        sourceUrl: agarVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'historical capsule · Central Pavilion')],
+      },
+      {
+        title: 'Ceremonial Hat for Eating Bouillabaisse',
+        cluster: 'wearable assemblage / cork / shells + artificial flowers',
+        period: '1936',
+        summary: '一个由 cork 制成、涂成蓝黄两色的 sculptural headpiece，上面附着 shells、fabric cuttings、plastic flowers 与 bark。自然与人工材料像 molluscs 一样聚在头顶，把 bouillabaisse 的海鲜联想变成荒诞 ritual costume。',
+        actions: [
+          '以 cork 制作可佩戴 headpiece，而不是 pedestal object',
+          '混合 shells、bark 等 natural material 与 plastic flowers / fabric scraps',
+          '使用 blue / yellow paint 统一异质材料',
+          '实际佩戴作品，使 assemblage 与 body / performance 发生关系',
+          '用 food title 把 object 引向 smell / taste / social ritual，而不仅是视觉 surrealism',
+        ],
+        sourceUrl: agarVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Wisdom Tooth',
+        cluster: 'organic painting / tooth-landscape / impasto',
+        period: 'c. 1960s',
+        summary: '在 ultramarine、dark patches、geometric pattern 与 lime-green flower outlines 中，一颗 tooth 成为唯一明确 human component。Agar 把牙齿嵌进类似 rock / organic incrustation 的表面，让 body fragment 与 landscape 无法分开。',
+        actions: [
+          '使用厚重 layered / impasto surface 建立接近 rock incrustation 的触感',
+          '在 ultramarine field 中叠加 geometry 与 floral outline',
+          '把 tooth 作为唯一可识别 human fragment 放入非人体环境',
+          '维持 dream-symbol 不可完全解释的状态，而不把图像收束成 allegory',
+        ],
+        sourceUrl: agarVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion historical presentation')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Eileen Agar 2022', url: agarVenice }],
+  },
+
+  'venice-claude-cahun': {
+    artistId: 'venice-claude-cahun',
+    projectCoverage: '3 个 gender-mask / bell-jar identity / miniature surreal set 节点已建立深档案 · 1928–1937',
+    imageCoverage: '0 / 3 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Cahun 的核心不是“拍中性自拍”这么简单，而是反复制造 persona、mask、cropping 与 miniature stage，让 self 永远处在被建构、被替换、被拒绝固定的状态。',
+    projects: [
+      {
+        title: 'Self portrait (in robe with masks attached)',
+        cluster: 'self-performance / mask / gender instability',
+        period: '1928',
+        summary: 'Cahun 把自己装扮成 life-sized doll，脸与衣服上的 mask、powdered face、painted heart 共同制造过度 artificial 的 persona。面具不是遮住“真实自我”，而是显示根本不存在一个可被轻易抓住的单一 self。',
+        actions: [
+          '通过 costume、makeup 与 attached masks 主动构造 persona',
+          '把 face 处理成 theatrical surface，而非心理肖像',
+          '使用 direct gaze 拒绝被动女性肖像姿态',
+          '与 Marcel Moore 的协作摄影实践共同完成 self-staging',
+          '让 gender / identity 在 multiple façades 之间不断切换',
+        ],
+        sourceUrl: cahunVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+      {
+        title: 'Keepsake',
+        cluster: 'bell jar / cropped head / anti-objectification self-portrait',
+        period: '1932',
+        summary: 'Cahun 的头部连续出现在四个 bell jars 中。bell jar 原本用于观察 / 分类 object，她却把自己放进科学展示语法里，同时用 active gaze 反向检查观众。',
+        actions: [
+          '借用 19th-century bell-jar display 这一 observation technology',
+          '通过 repeated head / cropping 制造被切割身体的 Surrealist trope',
+          '让每个 face 保持 active scanning / direct gaze，而非 inert specimen',
+          '把 classification apparatus 反转成对 viewer gaze 的批判',
+        ],
+        sourceUrl: cahunVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Le Cœur de Pic — photographs with Lise Deharme',
+        cluster: 'book / miniature set / poem-photo collaboration',
+        period: '1937',
+        summary: 'Deharme 的 32 首短诗与 Cahun 的 20 张照片共同组成儿童书。Cahun 用 toys、foods、plants、household objects 搭建 miniature stage，把 toothache、widowed plant 等 dream narrative 转成具象但荒诞的摄影场景。',
+        actions: [
+          '读取 Deharme poems 并为不同段落设计 symbolic still-life set',
+          '使用 toy / food / plant / household object 充当角色',
+          '通过 miniature staging 把不可见情绪转成 physical scene',
+          '让 photo 不只是 illustration，而与 poem 建立 independent symbolic system',
+        ],
+        sourceUrl: cahunVenice,
+        images: [],
+        relations: [rel('出版', 'Le Cœur de Pic', '1937 · Lise Deharme text + Claude Cahun photographs')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Claude Cahun 2022', url: cahunVenice }],
+  },
+
+  'venice-ithell-colquhoun': {
+    artistId: 'venice-ithell-colquhoun',
+    projectCoverage: '2 个 occult-surreal / genital-landscape / decalcomania 节点已建立深档案 · 1939–1948',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Colquhoun 将 Surrealist automatism 与 lifelong occult practice 结合，尤其关心 female spirituality、Earth magnetic currents 以及 genital form / landscape 的互相转化。',
+    projects: [
+      {
+        title: 'Occult-surrealist landscape practice',
+        cluster: 'female spirituality / magnetic earth / genital-landscape fusion',
+        period: 'late 1930s–1940s',
+        summary: 'Colquhoun 在加入 Surrealist group 前后持续研究 esoteric practice。她拒绝为了组织纪律放弃 occult groups，因此只短暂正式留在团体，却长期把 automatic technique、sexual symbolism 与女性—土地精神关系结合。',
+        actions: [
+          '研究 occult systems 与 unconscious / automatic Surrealist methods',
+          '把 genital-like curves 与 caves、landforms、magnetic-earth imagery 融合',
+          '拒绝把 female sexuality 当被动 erotic object，而作为 spiritual / terrestrial force',
+          '通过 ambiguous morphology 让 body / landscape 无法稳定区分',
+        ],
+        sourceUrl: colquhounVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Gorgon',
+        cluster: 'decalcomania / womb-cave / gendered occult symbol',
+        period: '1948',
+        summary: '以 decalcomania 制作的 Gorgon 出现 wing-like curved form、yellow-orange landscape、serpent hair 与近 womb / cave / rotten fruit 的模糊中心。Freudian phallic symbol 与女性神话力量被故意挤在同一 ambiguous body。',
+        actions: [
+          '采用 decalcomania transfer 让 material chance 参与形态生成',
+          '从 Gorgon myth 提取 serpent hair / monstrous feminine reference',
+          '把 cave、fruit、womb 等阅读保持开放，不确定单一图像类别',
+          '并置 phallic association 与 female spiritual power，制造性别符号冲突',
+        ],
+        sourceUrl: colquhounVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Ithell Colquhoun 2022', url: colquhounVenice }],
+  },
+
+  'venice-lois-mailou-jones': {
+    artistId: 'venice-lois-mailou-jones',
+    projectCoverage: '2 个 diaspora-modernism / African-mask painting 节点已建立深档案 · 1935–1938',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Jones 的 1930s African references 不是“异国装饰”，而与 Harlem Renaissance / Négritude 中将 African plastic art 重新放进 modernity 的政治文化工程直接相关。',
+    projects: [
+      {
+        title: 'Africa',
+        cluster: 'three women / African-mask morphology / diaspora modernism',
+        period: '1935',
+        summary: '三位女性被 lush foliage 包围，具有 elongated face、closed eyes 与 elaborate jewellery。人物既是 portrait-like figures，也借 Central / West African masks 的 visual grammar 建立 diasporic modernity。',
+        actions: [
+          '以 women 作为 repeated central subject，而不是把 African object 单独陈列',
+          '将 mask-like elongated facial structure 转译进 painted figures',
+          '结合 decorative foliage、jewellery 与 flattened facial expression',
+          '在 Harlem Renaissance / Négritude 语境中重新定位 Africa 作为现代文化来源',
+        ],
+        sourceUrl: jonesVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+      {
+        title: 'Les Fétiches',
+        cluster: 'African ceremonial masks / modernist painting / diaspora identity',
+        period: '1938',
+        summary: 'Jones 将多个 ceremonial-mask forms 压进 modernist pictorial field，使 African objects 不再是 ethnographic specimen，而成为 composition 的 active visual agents。',
+        actions: [
+          '研究 Central / West African ceremonial masks 与 textile pattern',
+          '将不同 mask form 从 museum / ethnographic context 转入 modernist painting',
+          '通过 overlapping / scale shift 让 object 形成 spatial rhythm',
+          '把 diasporic identity 的 multiple sources 直接写入 formal language',
+        ],
+        sourceUrl: jonesVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Loïs Mailou Jones 2022', url: jonesVenice }],
+  },
+
+  'venice-carol-rama': {
+    artistId: 'venice-carol-rama',
+    projectCoverage: '2 个 psychiatric-body / erotic watercolor 节点已建立深档案 · 1936–1941',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Rama 早期水彩把战争前后的家庭创伤、精神病院经验、女性 desire、残缺身体与羞耻全部压进 anarchic image；她画的女性不是 pathology specimen，而拥有强烈欲望与行动力。',
+    projects: [
+      {
+        title: 'Nonna Carolina',
+        cluster: 'watercolour / pain / body-parasite imagery',
+        period: '1936',
+        summary: '画中人物表情痛苦，颈部布满 leeches。身体被 discomfort、illness 与 grotesque detail 占据，却不遵循医学 illustration 的冷静语法。',
+        actions: [
+          '以 self-taught watercolour practice 直接处理 family / bodily trauma',
+          '把 leeches 等 disturbing detail 贴近 body surface',
+          '维持 naive / anarchic drawing quality，而非 academic anatomy',
+          '让 pain 与 erotic / grotesque energy 在同一人物中共存',
+        ],
+        sourceUrl: ramaVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Appassionata',
+        cluster: 'psychiatric institution / female desire / restrained body',
+        period: '1941',
+        summary: '作品涉及母亲住院期间 Rama 接触到的 psychiatric patients。裸体女性可能被 restraint 限制，却仍以 explicit desire、self-pleasure 与 bodily agency 出现；lush vegetation 从头发长出，使 pathology 与生命力发生冲突。',
+        actions: [
+          '从 psychiatric-hospital proximity 与 family trauma 提取人物经验',
+          '用 restraints / disability marks 表现 institutional control',
+          '同时保留 erotic desire 与 sexual agency，拒绝纯 victim image',
+          '把 vegetation 从 hair / body 生长出来，让精神危机与 organic vitality 共存',
+          '以 high heels 等 exaggerated detail 增强 performative femininity',
+        ],
+        sourceUrl: ramaVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Carol Rama 2022', url: ramaVenice }],
+  },
+
+  'venice-dorothea-tanning': {
+    artistId: 'venice-dorothea-tanning',
+    projectCoverage: '2 个 domestic-surreal / metamorphic-female 节点已建立深档案 · 1940–1947',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Tanning 的 female figures 不是 Surrealism 中等待观看的 muse，而被放在持续 becoming 的状态：身体、植物、房间、衣服与 unconscious force 不断交换边界。',
+    projects: [
+      {
+        title: 'Deirdre',
+        cluster: 'portrait / plant-hair metamorphosis / fantasy-reality overlap',
+        period: '1940',
+        summary: '一个 pearly-skinned woman 穿着 knotted red drapery，头发逐渐变成 evergreen plant。portrait identity 被自然 transformation 持续侵入，人物没有稳定成“真实的一个人”。',
+        actions: [
+          '从 conventional portrait format 开始，但主动引入 impossible organic transformation',
+          '让 hair 与 plant morphology 连续，而不是把植物当背景装饰',
+          '使用 drapery / complexion 建立 theatrical artificiality',
+          '保持 fantasy / reality 同时成立，不提供 dream explanation',
+        ],
+        sourceUrl: tanningVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Avatar',
+        cluster: 'trapeze girl / Victorian bedroom / absent body shell',
+        period: '1947',
+        summary: '一名闭眼女孩在 Victorian bedroom 中荡 trapeze，一件由“身体缺席”塑形的 dress/shell 在天花板附近悬荡。domestic room 被 unconscious force 入侵，女孩既像儿童又像正在脱离固定身体的 avatar。',
+        actions: [
+          '以 recognisable Victorian bedroom 建立 familiar domestic base',
+          '在室内加入 impossible trapeze motion，打破正常 architecture use',
+          '把 empty dress / shell 处理成身体缺席留下的三维形迹',
+          '让 eyes-closed female figure 保持 agency / motion，而不是静态被观看',
+          '利用 wallpaper、ceiling、suspended body 制造 parallel-realm spatial logic',
+        ],
+        sourceUrl: tanningVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Dorothea Tanning 2022', url: tanningVenice }],
+  },
+};
