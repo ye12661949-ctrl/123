@@ -1,5 +1,6 @@
 import type { Artist } from './data';
 import { artistBatch27 } from './expansionBatch27';
+import { broadeningArtists as registryBroadeningArtists } from './broadeningRegistry';
 
 const source2024 = 'https://www.deutsche-boerse.com/dbg-en/media/news-stories/press-releases/Lebohang-Kganye-wins-the-Deutsche-B-rse-Photography-Foundation-Prize-2024-3968426';
 
@@ -271,4 +272,4 @@ const enrichedBatch27: Artist[] = artistBatch27.map(artist => ({
   images: batch27Images[artist.id] ?? artist.images
 }));
 
-export const photoRosterImmediateArtists: Artist[] = [...enrichedBatch27, ...rosterArtists, ...broadeningArtists];
+export const photoRosterImmediateArtists: Artist[] = [...enrichedBatch27, ...rosterArtists, ...broadeningArtists, ...registryBroadeningArtists];
