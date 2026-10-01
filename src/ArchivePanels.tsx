@@ -2,61 +2,7 @@ import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import type { Artist } from './data';
 import { artistArchives, type ArchiveImage } from './archiveData';
-import { archiveBatch28 } from './archiveBatch28';
-import { archiveBatch29 } from './archiveBatch29';
-import { archiveBatch30 } from './archiveBatch30';
-import { archiveBatch31 } from './archiveBatch31';
-import { archiveBatch32 } from './archiveBatch32';
-import { archiveBatch33 } from './archiveBatch33';
-import { archiveBatch34 } from './archiveBatch34';
-import { archiveBatch35 } from './archiveBatch35';
-import { archiveBatch36 } from './archiveBatch36';
-import { archiveBatch37 } from './archiveBatch37';
-import { archiveBatch38 } from './archiveBatch38';
-import { archiveBatch39 } from './archiveBatch39';
-import { archiveBatch40 } from './archiveBatch40';
-import { archiveBatch41 } from './archiveBatch41';
-import { archiveBatch42 } from './archiveBatch42';
-import { archiveBatch43 } from './archiveBatch43';
-import { archiveBatch44 } from './archiveBatch44';
-import { archiveBatch45 } from './archiveBatch45';
-import { archiveBatch46 } from './archiveBatch46';
-import { archiveBatch47 } from './archiveBatch47';
-import { archiveBatch48 } from './archiveBatch48';
-import { archiveBatch49 } from './archiveBatch49';
-import { archiveBatch50 } from './archiveBatch50';
-import { archiveBatch51 } from './archiveBatch51';
-import { archiveBatch52 } from './archiveBatch52';
-import { archiveBatch53 } from './archiveBatch53';
-import { archiveBatch54 } from './archiveBatch54';
-import { archiveBatch55 } from './archiveBatch55';
-import { archiveBatch56 } from './archiveBatch56';
-import { archiveBatch57 } from './archiveBatch57';
-import { archiveBatch58 } from './archiveBatch58';
-import { archiveBatch59 } from './archiveBatch59';
-import { archiveBatch60 } from './archiveBatch60';
-import { archiveBatch61 } from './archiveBatch61';
-import { archiveBatch62 } from './archiveBatch62';
-import { archiveBatch63 } from './archiveBatch63';
-import { archiveBatch64 } from './archiveBatch64';
-import { archiveBatch65 } from './archiveBatch65';
-import { archiveBatch66 } from './archiveBatch66';
-import { archiveBatch67 } from './archiveBatch67';
-import { archiveBatch68 } from './archiveBatch68';
-import { archiveBatch69 } from './archiveBatch69';
-import { archiveBatch70 } from './archiveBatch70';
-import { archiveBatch71 } from './archiveBatch71';
-import { archiveBatch72 } from './archiveBatch72';
-import { archiveBatch73 } from './archiveBatch73';
-import { archiveBatch74 } from './archiveBatch74';
-import { archiveBatch75 } from './archiveBatch75';
-import { archiveBatch76 } from './archiveBatch76';
-import { archiveBatch77 } from './archiveBatch77';
-import { archiveBatch78 } from './archiveBatch78';
-import { archiveBatch79 } from './archiveBatch79';
-import { archiveBatch80 } from './archiveBatch80';
-import { archiveBatch81 } from './archiveBatch81';
-import { archiveBatch82 } from './archiveBatch82';
+import { getDeepArtistArchive } from './archiveRegistry';
 import { awards, curatorNetworks, institutions } from './ecosystemData';
 import { InstitutionHierarchy } from './ResearchMaps';
 
@@ -77,7 +23,7 @@ function ArchiveImageFigure({ image }: { image: ArchiveImage }) {
 }
 
 export function CompleteArtistArchive({ artist }: { artist: Artist }) {
-  const deepArchive = archiveBatch82[artist.id] ?? archiveBatch81[artist.id] ?? archiveBatch80[artist.id] ?? archiveBatch79[artist.id] ?? archiveBatch78[artist.id] ?? archiveBatch77[artist.id] ?? archiveBatch76[artist.id] ?? archiveBatch75[artist.id] ?? archiveBatch74[artist.id] ?? archiveBatch73[artist.id] ?? archiveBatch72[artist.id] ?? archiveBatch71[artist.id] ?? archiveBatch70[artist.id] ?? archiveBatch69[artist.id] ?? archiveBatch68[artist.id] ?? archiveBatch67[artist.id] ?? archiveBatch66[artist.id] ?? archiveBatch65[artist.id] ?? archiveBatch64[artist.id] ?? archiveBatch63[artist.id] ?? archiveBatch62[artist.id] ?? archiveBatch61[artist.id] ?? archiveBatch60[artist.id] ?? archiveBatch59[artist.id] ?? archiveBatch58[artist.id] ?? archiveBatch57[artist.id] ?? archiveBatch56[artist.id] ?? archiveBatch55[artist.id] ?? archiveBatch54[artist.id] ?? archiveBatch53[artist.id] ?? archiveBatch52[artist.id] ?? archiveBatch51[artist.id] ?? archiveBatch50[artist.id] ?? archiveBatch49[artist.id] ?? archiveBatch48[artist.id] ?? archiveBatch47[artist.id] ?? archiveBatch46[artist.id] ?? archiveBatch45[artist.id] ?? archiveBatch44[artist.id] ?? archiveBatch43[artist.id] ?? archiveBatch42[artist.id] ?? archiveBatch41[artist.id] ?? archiveBatch40[artist.id] ?? archiveBatch39[artist.id] ?? archiveBatch38[artist.id] ?? archiveBatch37[artist.id] ?? archiveBatch36[artist.id] ?? archiveBatch35[artist.id] ?? archiveBatch34[artist.id] ?? archiveBatch33[artist.id] ?? archiveBatch32[artist.id] ?? archiveBatch31[artist.id] ?? archiveBatch30[artist.id] ?? archiveBatch29[artist.id] ?? archiveBatch28[artist.id] ?? artistArchives[artist.id];
+  const deepArchive = getDeepArtistArchive(artist.id) ?? artistArchives[artist.id];
   const archive = deepArchive ?? {
     artistId: artist.id,
     projectCoverage: `${artist.projects.length} 个第一轮项目索引 · 待继续补全`,
