@@ -1,0 +1,296 @@
+import type { ArtistArchive, ArchiveRelation } from './archiveData';
+
+const rel = (kind: ArchiveRelation['kind'], label: string, detail?: string): ArchiveRelation => ({ kind, label, detail });
+
+const rahonVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/alice-rahon';
+const bayaVenice = 'https://www.labiennale.org/en/art/2022/witchs-cradle/baya-mahieddine';
+const zurnVenice = 'https://www.labiennale.org/en/art/2022/corps-orbite/unica-zu%CC%88rn';
+const kogelnikVenice = 'https://www.labiennale.org/en/art/2022/seduction-cyborg/kiki-kogelnik';
+const bartuszovaVenice = 'https://www.labiennale.org/en/art/2022/leaf-gourd-shell-net-bag-sling-sack-bottle-pot-box-container/maria-bartuszov%C3%A1';
+const asawaVenice = 'https://www.labiennale.org/en/art/2022/leaf-gourd-shell-net-bag-sling-sack-bottle-pot-box-container/ruth-asawa';
+
+export const archiveBatch92: Record<string, ArtistArchive> = {
+  'venice-alice-rahon': {
+    artistId: 'venice-alice-rahon',
+    projectCoverage: '2 个 cave-painting myth / post-apocalyptic marionette 节点已建立深档案 · 1946',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Rahon 把 exile 后接触到的 Mexican landscape、Indigenous histories、myth 与 poetry 放进 painting、gouache、wire marionette 等媒介，不把 Surrealism 限定在 canvas。',
+    projects: [
+      {
+        title: 'Thunderbird',
+        cluster: 'cave-painting reference / gestural symbols / floating mythic field',
+        period: '1946',
+        summary: '作品借 prehistoric cave-painting aesthetic，用 contour line 与 gestural brushstroke 在 floating ground 上连接多个 symbolic figures。',
+        actions: [
+          '从 prehistoric / ancestral image systems 提取 contour logic',
+          '用 gestural brushstroke 取代 naturalistic modelling',
+          '让 symbols 悬浮在非透视背景中形成 mythic map',
+          '把 poetry / myth reading 转成 visual network 而非 literal illustration',
+        ],
+        sourceUrl: rahonVenice,
+        images: [],
+        relations: [rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion')],
+      },
+      {
+        title: 'Mayan astronomy ballet / The Juggler / Androgyne',
+        cluster: 'gouache-to-marionette / post-atomic cosmology / nonbinary figure',
+        period: '1946',
+        summary: '原子弹落下后的次年，Rahon 设计一部受 ancient Maya astronomy 启发的 ballet。五个角色先以 gouache 出现，再被制作成 wire marionettes，包括 magician-like The Juggler 与 non-binary Androgyne，共同思考世界毁灭后生命如何重新开始。',
+        actions: [
+          '先通过 gouache 设计 character / costume language',
+          '再把二维角色转成 wire marionettes',
+          '借 Maya astronomy 建立 cosmic / temporal framework',
+          '将 atomic destruction 后的“重新开始”转成 theatre / puppet narrative',
+          '让 Androgyne 以 non-binary body 进入 posthuman future imagination',
+        ],
+        sourceUrl: rahonVenice,
+        images: [],
+        relations: [],
+      },
+    ],
+    awards: [],
+    exhibitions: ['The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Alice Rahon 2022', url: rahonVenice }],
+  },
+
+  'venice-baya-mahieddine': {
+    artistId: 'venice-baya-mahieddine',
+    projectCoverage: '3 个 female-bird / Maghrebi ornament / autonomous fairytale 节点已建立深档案 · 1947',
+    imageCoverage: '0 / 3 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Baya 的 1947 paintings 里，女性、鸟、植物与 ornament 不是背景/主体关系，而共享同一图案密度；女性 figure 始终保持主动、独立而非 Surrealist muse。',
+    projects: [
+      {
+        title: 'Femme robe jaune cheveux bleus',
+        cluster: 'female figure / peacocks / luminous dress',
+        period: '1947',
+        summary: 'twilight background 中，一名穿 bright yellow dress 的女性被四只 peacocks 与 butterfly 围绕。人物与鸟类形成既冲突又装饰化的密集场。',
+        actions: [
+          '在 cardboard support 上使用高饱和色彩',
+          '将 dress pattern、bird plumage、foliage 放在近似同等视觉权重',
+          '让 female figure 保持 frontal / self-possessed presence',
+          '以 Maghrebi motif 构成 ornament system，而非 ethnographic accessory',
+        ],
+        sourceUrl: bayaVenice,
+        images: [],
+        relations: [rel('展览', 'Galerie Maeght — first solo exhibition', 'Paris · 1947'), rel('展览', 'The Witch’s Cradle — Venice Biennale 2022', 'Central Pavilion')],
+      },
+      {
+        title: 'Femme robe à chevrons',
+        cluster: 'woman-bird fusion / shared eye / erotic fairytale',
+        period: '1947',
+        summary: 'woman 与 strange bird 共享一只眼睛，身体关系像 mating / fusion。人物身份没有被动物吞没，而是通过视觉连接变成跨物种 alliance。',
+        actions: [
+          '以 shared eye 作为 human / bird fusion 的直接结构',
+          '使用 chevron dress pattern 与 plumage 建立连续 texture',
+          '让 erotic implication 通过 form relation 而非 explicit narrative 出现',
+          '将 female agency 保持在 composition 中心',
+        ],
+        sourceUrl: bayaVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Femme au panier et coq rouge',
+        cluster: 'woman-rooster pattern linkage / decorative line system',
+        period: '1947',
+        summary: 'straight / undulating lines 同时穿过 giant rooster plumage 与 woman dress，使人和动物被同一个 decorative grammar 绑在一起。',
+        actions: [
+          '使用 repeated straight / curved line 统一不同物种表面',
+          '扩大 rooster scale，使动物不再只是 companion motif',
+          '让 basket / dress / plumage 形成连续 ornamental rhythm',
+          '通过 dense flat pattern 弱化 Western perspective',
+        ],
+        sourceUrl: bayaVenice,
+        images: [],
+        relations: [],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Galerie Maeght — 1947', 'The Witch’s Cradle — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Baya Mahieddine 2022', url: bayaVenice }],
+  },
+
+  'venice-unica-zurn': {
+    artistId: 'venice-unica-zurn',
+    projectCoverage: '2 个 anagram-writing / obsessive-monster drawing 节点已建立深档案 · 1954–1964',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Zürn 在文字与 drawing 之间来回：anagram 把同一组字母强迫重新排列，dense drawing 则把 eyes / lips / monstrous figures 反复叠加；两者共享 compulsive recombination。',
+    projects: [
+      {
+        title: 'Hexen Texte',
+        cluster: 'anagram poetry / constrained language / recombination',
+        period: '1954',
+        summary: 'Zürn 用同一组 letters 不断重排生成 anagrammatic poems。语言不是表达既有 thought，而是由 constraint 逼出陌生意义。',
+        actions: [
+          '选定 fixed letter set 作为 writing constraint',
+          '反复 rearrange letters 生成多个 phrase / poem',
+          '保留语言的 compulsive / recursive structure',
+          '把 semantic meaning 交给 formal recombination 而非自由叙述',
+        ],
+        sourceUrl: zurnVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'La Mort de Kennedy',
+        cluster: 'dense drawing / repeated eyes-lips / text-image anguish',
+        period: '1964',
+        summary: 'dense composition 中 monstrous creatures、eyes、lips 被碎裂、重复、叠加，并与 anguished poetic writing 并列。drawing 与 text 不是注释关系，而互相增加心理压力。',
+        actions: [
+          '以 obsessive line accumulation 建立 dense visual field',
+          '重复 eyes / lips 等 facial fragments 而不完成稳定 face',
+          '让 monstrous body 像 hallucination 一样从线条中浮现',
+          '加入 hand-written poetic fragments，与 drawing tension 同步',
+        ],
+        sourceUrl: zurnVenice,
+        images: [],
+        relations: [rel('展览', 'Corps orbite — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Corps orbite — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Unica Zürn 2022', url: zurnVenice }],
+  },
+
+  'venice-kiki-kogelnik': {
+    artistId: 'venice-kiki-kogelnik',
+    projectCoverage: '3 个 cyborg silhouette / fragmentation / feminist artificial-body 节点已建立深档案 · 1964–1967',
+    imageCoverage: '0 / 3 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Kogelnik 的 Pop language 同时迷恋也嘲讽 Cold War techno-utopia；她把 body 当可扫描、裁切、重装的 technology，从而把 machine 既作为控制工具，也作为 liberation tool。',
+    projects: [
+      {
+        title: 'Cold Passage / M',
+        cluster: 'X-ray silhouette / cut-up cyborg / anonymous body',
+        period: '1964',
+        summary: 'colourful silhouettes 像 stylish X-rays，被切成独立 body parts。匿名化与 fragmentation 让身体看起来像 machine-readable data。',
+        actions: [
+          '从 X-ray / technical imaging language 提取 body silhouette',
+          '将 body 分割成 detachable sections',
+          '使用 flat bright Pop colour 抵消医学图像的冷静语气',
+          '让 cyborg body 同时呈现 fetishisation 与 mobility / freedom',
+        ],
+        sourceUrl: kogelnikVenice,
+        images: [],
+        relations: [rel('展览', 'Seduction of the Cyborg — Venice Biennale 2022', 'Arsenale')],
+      },
+      {
+        title: 'Female Robot',
+        cluster: 'female cyborg / scissors / body fragmentation',
+        period: '1964',
+        summary: '在 cyborg body 旁加入 scissors，使切割不再只是图像结果，而变成作品内部明确的工具/威胁。',
+        actions: [
+          '保留 robot / female-body hybrid silhouette',
+          '将 scissors 作为 fragmentation instrument 直接放进 composition',
+          '把 fashionable body 与 mechanical control 绑定',
+          '使 feminist critique 通过 physical cutting metaphor 出现',
+        ],
+        sourceUrl: kogelnikVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Artificial Man in Four Parts',
+        cluster: 'black-white scan / brain-heart-hand-sex organs / generative robot',
+        period: '1967',
+        summary: 'robotic body 像直接来自 X-ray scan，被拆成四部分并突出 brain、heart、hand、sexual organs。machine gaze 不只规训身体，也提供重新定义 body agency 的可能。',
+        actions: [
+          '转向 black-and-white scan-like visual language',
+          '分离并强调 brain / heart / hand / sexual organs',
+          '将 anatomy 显示为 modular information system',
+          '把 robotic body 从 victim image 推向 feminist generative agent',
+        ],
+        sourceUrl: kogelnikVenice,
+        images: [],
+        relations: [],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Seduction of the Cyborg — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Kiki Kogelnik 2022', url: kogelnikVenice }],
+  },
+
+  'venice-maria-bartuszova': {
+    artistId: 'venice-maria-bartuszova',
+    projectCoverage: '2 个 gravity-cast / pneumatic-shell 节点已建立深档案 · 1960s–1980s',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Bartuszová 的抽象形并不是手工捏出来的“有机形态”，而是借 balloon、gravity、plaster pressure 直接让 material force 参与成形。',
+    projects: [
+      {
+        title: 'Gravity-formed balloon plasters',
+        cluster: 'balloon mould / gravity / seed-egg maternal form',
+        period: '1960s–1970s',
+        summary: '将 rubber balloons 悬挂后灌入 plaster，gravity 把软模拉成 round / drooping forms，像 seed、egg、nest、breast 或 erotic body part。',
+        actions: [
+          '用 ordinary rubber balloon 作为 flexible mould',
+          '从上方填充 wet plaster，让 gravity 决定下坠轮廓',
+          '在 curing 前控制 balloon tension / support point',
+          '脱模后保留由 pressure / weight 自动生成的 organic asymmetry',
+        ],
+        sourceUrl: bartuszovaVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Pneumatic shaping shells',
+        cluster: 'thin plaster shell / coated balloon / fragile organic cavity',
+        period: '1980s',
+        summary: '后期不再把 plaster 灌进 balloon，而是在 balloon 外表涂覆薄层，形成 whole / fragmented ovoid shell。作品从 solid body 转成 fragile skin / cavity。',
+        actions: [
+          '改用 coating balloon surface 而不是 filling balloon',
+          '控制 plaster layer thickness 形成极薄 fragile shell',
+          '在脱模/破裂中保留 cavity 与 fragment',
+          '把 egg / seed-like organic purity 与 perishability 同时显现',
+        ],
+        sourceUrl: bartuszovaVenice,
+        images: [],
+        relations: [rel('展览', 'Leaf Gourd Shell… — Venice Biennale 2022', 'Arsenale historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Leaf Gourd Shell Net Bag Sling Sack Bottle Pot Box Container — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Maria Bartuszová 2022', url: bartuszovaVenice }],
+  },
+
+  'venice-ruth-asawa': {
+    artistId: 'venice-ruth-asawa',
+    projectCoverage: '2 个 looped-wire / form-within-form 节点已建立深档案 · c.1952–1962',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Asawa 把 industrial wire 通过 looped basket-weaving technique 转成没有实体内部质量的 volume；inside / outside 不是对立，而是同一连续 surface 的两个读法。',
+    projects: [
+      {
+        title: 'Untitled (S.030, Hanging Eight Separate Cones Suspended through Their Centers)',
+        cluster: 'looped wire / basket technique / suspended cones',
+        period: 'c. 1952',
+        summary: '多个 separate cone 通过中心悬挂，wire mesh 让 volume 可见却没有 solid mass。技术源自在 Mexico 学到的 basket-weaving method。',
+        actions: [
+          '使用 brass / steel / copper wire 等 industrial material',
+          '采用 repeated looped-wire basket technique 手工编结',
+          '让 cone 通过 suspension 而非 pedestal 获得方向',
+          '利用 mesh translucency 同时显示 front / back / interior layers',
+        ],
+        sourceUrl: asawaVenice,
+        images: [],
+        relations: [rel('展览', 'Leaf Gourd Shell… — Venice Biennale 2022', 'Arsenale historical capsule')],
+      },
+      {
+        title: 'Untitled (S.101, Hanging Single-Lobed, Five-Layered Continuous Form within a Form)',
+        cluster: 'nested wire cocoon / continuous surface / womb-like volume',
+        period: 'c. 1962',
+        summary: '五层 continuous wire cocoon 嵌套在单一 hanging form 中，内部与外部通过同一 looped surface 连续生成，呈现 womb / plant / wave-like associations。',
+        actions: [
+          '以一条连续 wire-loop logic 建立多层 nested volume',
+          '不加入 internal armature / solid core',
+          '利用 translucency 让多个 shell 同时被看见',
+          '通过 hanging gravity 形成 elongated organic contour',
+          '让 interior / exterior surfaces 被理解为 interdependent rather than separate',
+        ],
+        sourceUrl: asawaVenice,
+        images: [],
+        relations: [],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Leaf Gourd Shell Net Bag Sling Sack Bottle Pot Box Container — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Ruth Asawa 2022', url: asawaVenice }],
+  },
+};
