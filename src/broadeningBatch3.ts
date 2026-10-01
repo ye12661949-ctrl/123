@@ -1,0 +1,192 @@
+import type { Artist } from './data';
+
+export const broadeningBatch3: Artist[] = [
+  {
+    id: 'dayanita-singh',
+    name: 'Dayanita Singh',
+    born: '1961',
+    base: 'New Delhi',
+    intro: '把摄影档案、摄影书和可移动的木制展示结构组合成自己称作“museum”的系统，让编辑、存储、展示和重新排列都成为摄影作品的一部分。',
+    methods: ['摄影档案', '编辑', '可移动展示结构', '摄影书', '序列重组'],
+    subjects: ['档案', '家庭', '印度', '记忆', '博物馆', '展示制度'],
+    outputs: ['摄影', '摄影书', '移动博物馆', '木制装置'],
+    institutions: ['MoMA', 'Art Institute of Chicago', 'Hayward Gallery'],
+    achievements: ['Museum Bhavan', 'Go Away Closer — Hayward Gallery 2013'],
+    whyImportant: '她把“照片挂在墙上”这件事重新设计：同一批图像可以被保存、抽出、换序、折叠和旅行，摄影因此变成一种不断编辑的空间结构。',
+    projects: [{
+      year: '2010s–ongoing',
+      title: 'Museum Bhavan',
+      type: 'mobile museums / archive / reconfigurable display',
+      facts: ['制作一组大型手工木制结构作为“博物馆”。', '每个结构内部可容纳约百幅装框照片，只有部分同时展出，其余作为内部 reserve collection 保存。', '让结构可以打开、关闭、重新排列、组合成小房间或迷宫。', '持续把新旧照片重新编辑进不同 museum，并配套出版与 museum shop 等延伸形式。'],
+      reading: '作品把摄影的意义从单张照片转移到“谁在编辑、怎么收藏、什么时候展示”。博物馆不再是照片外部的容器，而直接成为作品。'
+    }],
+    images: [],
+    sourceLabel: 'Dayanita Singh Studio',
+    sourceUrl: 'https://dayanitasingh.in/museums/museum-bhavan/'
+  },
+  {
+    id: 'gauri-gill',
+    name: 'Gauri Gill',
+    born: '1970',
+    base: 'New Delhi',
+    intro: '以长期关系和协作为核心，在印度农村社区中发展肖像、档案和共同创作，让被拍摄者、当地艺术家和摄影师共同决定图像如何生成。',
+    methods: ['长期田野', '协作式摄影', '肖像', '社区参与', '地方工艺'],
+    subjects: ['农村生活', 'Adivasi 社群', '劳动', '女性', '身份', '社区知识'],
+    outputs: ['摄影系列', '摄影书', '协作作品', '展览'],
+    institutions: ['MoMA PS1', 'Tate Modern', 'documenta'],
+    achievements: ['Acts of Appearance 2015–ongoing', 'Prix Pictet 2023 shortlisted'],
+    whyImportant: '她的协作不是“让当地人当模特”这么简单：面具由当地工匠重新设计，人物自己即兴表演，摄影师只是共同生产链条中的一环。',
+    projects: [{
+      year: '2015–ongoing',
+      title: 'Acts of Appearance',
+      type: 'collaborative portrait / papier-mâché masks / Adivasi community',
+      facts: ['在 Maharashtra 的 Jawhar 与 Kokna、Warli 社群的 papier-mâché 面具艺术家合作。', '邀请近四十位艺术家、家人和志愿者共同制作一套新面具。', '传统 Bohada 面具通常表现神与恶魔，这一项目则转向当代人物、年龄、情绪、疾病、关系、动物与物件。', '参与者戴上这些面具，在村庄内外自行即兴演出真实或梦境般的情境，再由 Gill 拍摄。'],
+      reading: '摄影里的“脸”不再由摄影师单方面定义；地方工艺、参与者的想象和现场表演共同制造身份，因此肖像变成集体作者关系。'
+    }],
+    images: [],
+    sourceLabel: 'Gauri Gill Studio',
+    sourceUrl: 'https://gaurigill.com/works/'
+  },
+  {
+    id: 'oscar-munoz',
+    name: 'Oscar Muñoz',
+    chineseName: '奥斯卡·穆尼奥斯',
+    born: '1951',
+    base: 'Cali, Colombia',
+    intro: '把照片放到水、呼吸、煤粉和蒸发这些不稳定材料中，让肖像不断生成、变形和消失，研究记忆与死亡如何依赖脆弱的物质过程。',
+    methods: ['丝网印刷', '水面成像', '煤粉', '蒸发', '摄影装置', '参与式观看'],
+    subjects: ['记忆', '失踪', '死亡', '肖像', '哥伦比亚', '图像消失'],
+    outputs: ['摄影装置', '版画', '录像', '参与式作品'],
+    institutions: ['MoMA', 'The Metropolitan Museum of Art'],
+    achievements: ['Narcisos 1994–ongoing', '作品进入 MoMA / The Met collection'],
+    whyImportant: '他的作品把“照片固定一个瞬间”的基本假设反过来：图像可以靠水面暂时存在，随着蒸发扭曲、沉积甚至消失。',
+    projects: [{
+      year: '1994–ongoing',
+      title: 'Narcisos',
+      type: 'screenprint / coal dust / water / evaporation',
+      facts: ['把自己的肖像转成丝网印刷模板。', '不用纸承印，而把煤粉图像印在装有水的浅盘表面。', '让水自然蒸发。', '蒸发过程中煤粉不断漂移和变形，最终沉到容器底部形成扭曲后的图像。'],
+      reading: '这里摄影不是保存记忆，而是模拟记忆本身的不稳定：肖像在观看期间就可能发生变化，材料过程直接变成时间。'
+    }],
+    images: [],
+    sourceLabel: 'The Metropolitan Museum of Art',
+    sourceUrl: 'https://www.metmuseum.org/art/collection/search/827982'
+  },
+  {
+    id: 'alfredo-jaar',
+    name: 'Alfredo Jaar',
+    born: '1956',
+    base: 'New York',
+    intro: '用摄影、文字、灯箱、公共广告与建筑装置处理战争、种族灭绝和媒体观看伦理，经常通过减少甚至撤走图像来反问“什么可以被展示”。',
+    methods: ['研究型装置', '文本', '摄影', '灯箱', '公共介入', '图像伦理'],
+    subjects: ['战争', '种族灭绝', '媒体', '观看伦理', '迁徙', '人权'],
+    outputs: ['装置', '摄影', '公共艺术', '影片', '印刷品'],
+    institutions: ['MoMA', 'Venice Biennale', 'documenta'],
+    achievements: ['The Rwanda Project 1994–2010', 'Rwanda, Rwanda 1994 — MoMA collection'],
+    whyImportant: 'Jaar 的重要性在于他不默认“多给受害者照片就是更有伦理”。他会使用文字、空白、强光和延迟观看，让观众意识到自己消费灾难图像的方式。',
+    projects: [{
+      year: '1994',
+      title: 'Rwanda, Rwanda',
+      type: 'public photolithograph / text / Rwanda Project',
+      facts: ['1994 年 8 月在种族灭绝后前往 Rwanda。', '回到欧洲后启动长期 Rwanda Project。', '为 Malmö 的项目制作重复书写“RWANDA”的大型文字印刷品。', '把约四百张印刷品安装在城市公共空间的背光广告位，让居民在日常通勤中反复遇见这个地名。'],
+      reading: '他刻意不用血腥新闻照，而只留下地名；视觉信息被压低后，观众反而必须主动想象“Rwanda”背后发生了什么。'
+    }],
+    images: [],
+    sourceLabel: 'MoMA',
+    sourceUrl: 'https://www.moma.org/collection/works/73521'
+  },
+  {
+    id: 'lieko-shiga',
+    name: 'Lieko Shiga',
+    chineseName: '志贺理江子',
+    born: '1980',
+    base: 'Miyagi, Japan',
+    intro: '把社区生活、地方神话、灾害记忆与强烈闪光、夜景和超现实编排结合，长期围绕宫城县北釜的土地与居民发展摄影。',
+    methods: ['长期社区摄影', '夜间摄影', '强闪光', '编排', '地方叙事', '摄影书'],
+    subjects: ['社区', '灾害', '土地', '神话', '记忆', '身体'],
+    outputs: ['彩色摄影', '摄影书', '大型空间安装'],
+    institutions: ['MoMA', 'Tate', 'Tokyo Photographic Art Museum', 'Foam'],
+    achievements: ['Rasen Kaigan 2008/2009–2012', 'Kimura Ihei Photography Award 2008', 'ICP Infinity Award 2009'],
+    whyImportant: '她把“地方纪录”推进到现实、口述记忆和神话彼此纠缠的状态。照片既来自长期生活关系，又故意保持怪异、不可完全解释的视觉强度。',
+    projects: [{
+      year: '2009–2012',
+      title: 'Rasen Kaigan / Spiral Coast',
+      type: 'community photography / Kitakama / chromogenic prints',
+      facts: ['长期围绕 Miyagi 的 Kitakama 社区工作。', '在 2009–2012 年间持续形成彩色摄影系列。', '把人物、植物、夜晚、身体动作和地方环境组织成非线性的视觉序列。', '2012 年在 Sendai Mediatheque 以大规模空间形式展出，之后又出版 album 与 notebook。'],
+      reading: '这一系列不能只按“海啸纪录”读取；它在灾害前后持续建立人与土地的关系，使现实事件、地方历史和难以解释的精神经验并存。'
+    }],
+    images: [],
+    sourceLabel: 'Lieko Shiga Studio / MoMA',
+    sourceUrl: 'https://www.liekoshiga.com/works/rasen-kaigan/'
+  },
+  {
+    id: 'takashi-homma',
+    name: 'Takashi Homma',
+    chineseName: 'ホンマタカシ / 本间贵志',
+    born: '1962',
+    base: 'Tokyo',
+    intro: '以克制的彩色摄影观察东京郊区、建筑与日常空间，同时持续研究杂志、摄影书、家庭相册和博物馆如何改变一张照片的意义。',
+    methods: ['4×5 摄影', '城市景观', '建筑摄影', '摄影书', 'camera obscura', '媒体研究'],
+    subjects: ['东京郊区', '消费景观', '建筑', '家庭', '媒体', '摄影制度'],
+    outputs: ['彩色摄影', '摄影书', '电影', 'camera obscura 项目'],
+    institutions: ['Tokyo Opera City Art Gallery', 'Fotomuseum Winterthur'],
+    achievements: ['Tokyo Suburbia — Kimura Ihei Photography Award 1999', 'New Documentary museum tour 2011–2012'],
+    whyImportant: '他与森山大道式强烈身体感的东京摄影形成另一条线：退后、固定、冷静，让住宅、道路、儿童和商业设施在同一画面中获得相似权重。',
+    projects: [{
+      year: '1995–1998',
+      title: 'Tokyo Suburbia',
+      type: 'suburban landscape / color photography / photobook',
+      facts: ['在东京周边新城、住宅区与人工景观中持续拍摄。', '使用较为克制、正面的观察距离记录住宅、道路、公共设施与人物。', '把系列编辑为 1998 年出版的摄影书 Tokyo Suburbia。', '作品在 1999 年获得第 24 届木村伊兵卫摄影奖。'],
+      reading: '它没有把郊区当成“无聊背景”，而是把消费社会和规划城市真正长什么样，当成九十年代东京最值得被记录的景观。'
+    }],
+    images: [],
+    sourceLabel: 'Tokyo Opera City Art Gallery',
+    sourceUrl: 'https://www.operacity.jp/ag/exh129/e/introduction.html'
+  },
+  {
+    id: 'yuki-onodera',
+    name: 'Yuki Onodera',
+    chineseName: 'オノデラユキ / 小野寺由纪',
+    born: '1962',
+    base: 'Paris',
+    intro: '通过旧衣、暗房实验、物体悬挂和摄影装置不断改变“被拍摄对象”的身份，使摄影介于物证、剪影、肖像和实验装置之间。',
+    methods: ['暗房实验', '物件悬挂', '黑白摄影', '无身体肖像', '摄影装置'],
+    subjects: ['衣物', '身体缺席', '肖像', '物件', '摄影机制', '记忆'],
+    outputs: ['银盐摄影', '大型摄影', '摄影系列'],
+    institutions: ['SFMOMA', 'National Museum of Art Osaka', 'National Museum of Asian Art'],
+    achievements: ['Portrait of Second-hand Clothes 1994–1997', 'Prix Kodak de la Critique Photographique 1996'],
+    whyImportant: '她能用极简单的物理操作让普通物件彻底改变身份：一件旧衣被悬在窗前、放大成一米见方后，会同时像人的肖像、幽灵和抽象形状。',
+    projects: [{
+      year: '1994–1997',
+      title: 'Portrait of Second-hand Clothes',
+      type: 'suspended used clothes / gelatin silver prints / bodiless portrait',
+      facts: ['从 Christian Boltanski 1993 年 Paris 展览 Dispersion 中带走约五十件观众可购买的旧衣。', '把每件衣服分别悬挂在自己 Montmartre 公寓的窗前。', '利用逆光让衣物脱离原有身体，形成巨大的黑色轮廓。', '制作大型 gelatin silver prints，整个系列约 52 件作品。'],
+      reading: 'Boltanski 把旧衣连接死亡和匿名群体，Onodera 则把每件衣服重新单独“立起来”，使没有身体的衣服重新获得近似个体肖像的存在感。'
+    }],
+    images: [],
+    sourceLabel: 'Yuki Onodera Studio',
+    sourceUrl: 'https://yukionodera.fr/en/works/portrait-of-second-hand-clothes/'
+  },
+  {
+    id: 'moyra-davey',
+    name: 'Moyra Davey',
+    born: '1958',
+    base: 'New York',
+    intro: '把书、咖啡馆、家庭生活、写作与模拟摄影连接起来，尤其以将照片折成信封直接寄出的方式，让邮戳、胶带和折痕成为图像的一部分。',
+    methods: ['模拟摄影', '邮寄摄影', '折叠', '写作', '电影散文', '阅读档案'],
+    subjects: ['书籍', '家庭', '写作', '日常生活', '通信', '时间'],
+    outputs: ['摄影网格', 'mailer photographs', '电影', '文本'],
+    institutions: ['MoMA', 'Whitney Museum'],
+    achievements: ['New Photography 2011 — MoMA', 'Whitney Biennial 2012'],
+    whyImportant: '她让照片真正经历物流系统：折叠、贴胶带、写地址、寄出，再把收到后的照片挂墙。运输留下的“损伤”不是瑕疵，而成为时间和社会关系的物理记录。',
+    projects: [{
+      year: '2007–ongoing',
+      title: 'Mailer photographs',
+      type: 'folded photographs / postal circulation / grid installation',
+      facts: ['先制作模拟摄影照片。', '将照片像纸张一样折叠成可邮寄的形态。', '直接在照片背面书写地址、贴邮票和胶带。', '把作品寄给朋友或家人，让邮政系统留下邮戳、折痕、擦伤和运输痕迹。', '作品返回或汇集后，再把这些经历过流通的照片按网格安装。'],
+      reading: '摄影不再是需要白手套保护的完美表面，而是一件可以旅行的物体；通信关系和物流时间被直接压进照片材料里。'
+    }],
+    images: [],
+    sourceLabel: 'MoMA New Photography 2011',
+    sourceUrl: 'https://www.moma.org/interactives/exhibitions/2011/newphotography/moyra-davey/index.html'
+  }
+];
