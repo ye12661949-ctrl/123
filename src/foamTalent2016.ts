@@ -6,6 +6,9 @@ import { foamTalent2016DeepArtists4 } from './foamTalent2016Deep4';
 import { foamTalent2016DeepArtists5 } from './foamTalent2016Deep5';
 import { foamTalent2016DeepArtists6 } from './foamTalent2016Deep6';
 import { foamTalent2016DeepArtists7 } from './foamTalent2016Deep7';
+import { artistBatch27 } from './expansionBatch27';
+import { artistBatch28 } from './expansionBatch28';
+import { artistBatch30 } from './expansionBatch30';
 
 const source = 'https://www.foam.org/events/foam-talent-2016';
 const rosterSource = 'https://www.foam.org/nl/events/foam-talent-2017-new-york';
@@ -56,7 +59,8 @@ const rosterArtists: Artist[] = records.map(([id,name,base,method,subject]) => (
   sourceUrl:rosterSource
 }));
 
-// Deep profiles come first so the global name/id de-duplication in data.ts keeps the researched version.
-export const foamTalent2016Artists: Artist[] = [...foamTalent2016DeepArtists7, ...foamTalent2016DeepArtists6, ...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
+// Expansion batches are routed through this already-imported directory module so they enter data.ts without duplicating the global catalogue logic.
+// Deep profiles still come before the generic Foam roster; data.ts performs final id/name de-duplication.
+export const foamTalent2016Artists: Artist[] = [...artistBatch30, ...artistBatch28, ...artistBatch27, ...foamTalent2016DeepArtists7, ...foamTalent2016DeepArtists6, ...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
 
 export const foamTalent2016Source = source;
