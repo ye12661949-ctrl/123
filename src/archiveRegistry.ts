@@ -62,8 +62,10 @@ import { archiveBatch87 } from './archiveBatch87';
 import { archiveBatch88 } from './archiveBatch88';
 import { archiveBatch89 } from './archiveBatch89';
 import { archiveBatch90 } from './archiveBatch90';
+import { archiveBatch91 } from './archiveBatch91';
 
 const deepArchiveBatches: Array<Record<string, ArtistArchive>> = [
+  archiveBatch91,
   archiveBatch90,
   archiveBatch89,
   archiveBatch88,
