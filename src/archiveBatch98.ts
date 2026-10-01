@@ -1,0 +1,275 @@
+import type { ArtistArchive, ArchiveRelation } from './archiveData';
+
+const rel = (kind: ArchiveRelation['kind'], label: string, detail?: string): ArchiveRelation => ({ kind, label, detail });
+
+const apollonioVenice = 'https://www.labiennale.org/en/art/2022/technologies-enchantment/marina-apollonio';
+const dadamainoVenice = 'https://www.labiennale.org/en/art/2022/technologies-enchantment/dadamaino';
+const dilucianoVenice = 'https://www.labiennale.org/en/art/2022/technologies-enchantment/lucia-di-luciano';
+const grisiVenice = 'https://www.labiennale.org/en/art/2022/technologies-enchantment/laura-grisi';
+const variscoVenice = 'https://www.labiennale.org/en/art/2022/technologies-enchantment/grazia-varisco';
+const vigoVenice = 'https://www.labiennale.org/en/art/2022/technologies-enchantment/nanda-vigo';
+
+export const archiveBatch98: Record<string, ArtistArchive> = {
+  'venice-marina-apollonio': {
+    artistId: 'venice-marina-apollonio',
+    projectCoverage: '2 个 programmed-grid / aluminium-relief perceptual 节点已建立深档案 · early 1960s–1970',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Apollonio 的“运动”并不依赖复杂机械，而来自重复几何、金属反光、观看角度和背景色之间的系统关系；观众移动时，作品才真正发生。',
+    projects: [
+      {
+        title: 'Early programmed drawings',
+        cluster: 'two-tone drawing / repeated geometry / retinal movement',
+        period: 'early 1960s',
+        summary: '纸上作品以两种颜色或明暗调子反复排列纯几何形，先建立严格网格，再利用重复与微小变化制造视觉振动。',
+        actions: [
+          '先设定 square / circle 等 pure geometric module',
+          '将 module 按 regular grid 反复排列',
+          '限制 palette 为两种颜色或 tones，降低叙事干扰',
+          '通过 spacing / alternation 的微调制造 retinal movement',
+          '把作品理解为 viewer-eye 与 programmed structure 的互动而非静态图案',
+        ],
+        sourceUrl: apollonioVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+      {
+        title: 'Rilievi',
+        cluster: 'aluminium lattice / masonite / fluorescent ground / viewpoint shift',
+        period: '1964–1970',
+        summary: 'Rilievi 把纸上网格变成三维 aluminium lattice。细铝条装在 dark 或 fluorescent masonite 上，条带的尺寸、深度、距离与错位不断变化；观众一移动，金属反光和背景色便改变整体节奏。',
+        actions: [
+          '将二维 geometric grid 转译成 thin aluminium-strip lattice',
+          '把 metal mesh 固定在 dark / fluorescent masonite support 前方',
+          '系统改变 strip size、spacing、depth 与 alternation',
+          '利用 aluminium reflection 响应 viewer movement',
+          '让 apparent motion 由 viewing angle 与 background colour 共同生成',
+        ],
+        sourceUrl: apollonioVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Rilievo 902 and related works')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Technologies of Enchantment — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Marina Apollonio 2022', url: apollonioVenice }],
+  },
+
+  'venice-dadamaino': {
+    artistId: 'venice-dadamaino',
+    projectCoverage: '2 个 perforated-plastic / chromatic-relief 节点已建立深档案 · 1960–1975',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Dadamaino 的程序并不追求完美机器精度：手工打孔、透明层错位、颜色与阴影故意把严格网格推向不稳定和情绪化。',
+    projects: [
+      {
+        title: 'Volumi a moduli sfasati',
+        cluster: 'transparent plastic / hand-punched grid / misregistration',
+        period: '1960–1961',
+        summary: '两层或多层透明塑料被规则打孔后叠放，但每层故意略微错位。看似科学的 grid 因手工孔洞和 misalignment 产生复杂干涉与迷宫般视觉。',
+        actions: [
+          '切割两层或多层 transparent plastic sheets',
+          '按 regular interval 手工 punch holes',
+          '将各层故意错位而非精确 registration',
+          '利用 overlapping apertures 制造 moiré-like perceptual instability',
+          '保留 hand-made irregularity，使 programmed order 不完全机械化',
+        ],
+        sourceUrl: dadamainoVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+      {
+        title: 'Cromorilievi',
+        cluster: 'mathematical relief / coloured units / shadow modulation',
+        period: 'c.1972–1975',
+        summary: '方形 panel 上按数学规则固定 solid forms；结构本身完全静止，但不同颜色和投下的阴影让规则排列产生动态错觉。',
+        actions: [
+          '在 square support 上建立预先计算的 modular arrangement',
+          '固定 repeated solid forms 而不使用 motor',
+          '通过 colour variation 区分 units',
+          '让 relief depth 产生随光线变化的 shadow field',
+          '利用 static order 与 dynamic perception 的反差制造 visual tension',
+        ],
+        sourceUrl: dadamainoVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Technologies of Enchantment — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Dadamaino 2022', url: dadamainoVenice }],
+  },
+
+  'venice-lucia-di-luciano': {
+    artistId: 'venice-lucia-di-luciano',
+    projectCoverage: '1 个 mathematical-sequence / black-white masonite 核心节点已建立深档案 · 1965',
+    imageCoverage: '0 / 1 项目暂不使用不稳定外链图像',
+    note: '当前先把 Irradiazioni 做深。Di Luciano 的方法像手工执行的算法：不用电子计算机，而把当时新兴 computing logic 转成严格的数学序列，再让观看者的眼睛自己产生振动和运动感。',
+    projects: [
+      {
+        title: 'Irradiazioni',
+        cluster: 'mathematical sequencing / black-white geometry / simulated computation',
+        period: '1965',
+        summary: '黑白 masonite 作品用 squares 和 rectangles 按复杂数学规则排列。艺术家主动放弃颜色和情绪化笔触，以 tension、impulse、vibration 模拟自动计算逻辑，同时让观看者拥有不同视觉路径。',
+        actions: [
+          '先建立 mathematical rule / sequence 作为 composition generator',
+          '放弃 colour，限制为 black-and-white contrast',
+          '在 masonite 上排列 squares / rectangles',
+          '通过 scale、spacing 与 sequence 形成 pulses / vibrations',
+          '模拟 computer logic 但不实际使用 computer',
+          '让 eye 自主在结构中移动，把 viewer 变成 perception co-producer',
+        ],
+        sourceUrl: dilucianoVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Technologies of Enchantment — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Lucia Di Luciano 2022', url: dilucianoVenice }],
+  },
+
+  'venice-laura-grisi': {
+    artistId: 'venice-laura-grisi',
+    projectCoverage: '2 个 artificial-sunset / simulated-natural-phenomena 节点已建立深档案 · 1967–1970s',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Grisi 不把自然“表现”出来，而是用 Plexiglas、neon、motor / environmental technology 在室内重新制造 sunset、rain、wind 等现象，让技术环境成为自然体验的人工替身。',
+    projects: [
+      {
+        title: 'Sunset Light',
+        cluster: 'Plexiglas pillar / neon core / artificial sunset environment',
+        period: '1967',
+        summary: 'looming Plexiglas pillars 内部以 yellow neon 作为光核，模仿 sunset 的暖色。观众移动时身体反射在透明表面上，人工光与 viewer image 一起形成不断变化的“太阳”。',
+        actions: [
+          '制作具有 industrial finish 的 transparent / reflective Plexiglas pillar',
+          '在内部设置 yellow neon core',
+          '校准 light intensity / warmth 以召回 sunset sensation',
+          '利用 Plexiglas reflection 捕捉 viewer movement',
+          '让自然经验通过 engineered light environment 被重新生成',
+        ],
+        sourceUrl: grisiVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+      {
+        title: 'Artificial rain / wind environments',
+        cluster: 'environmental simulation / mechanical weather / immersive perception',
+        period: 'late 1960s–1970s',
+        summary: '在 Sunset Light 之后，Grisi 继续以机械与技术装置模拟 rain、wind 等自然现象。重点不是 illusionism，而是让身体真正进入一个被技术重建的气候经验。',
+        actions: [
+          '从 rain / wind 等自然过程提取可机械化参数',
+          '使用 technological apparatus 在 gallery 内重建 environmental condition',
+          '让 sound、air movement、light 与 viewer body 共同构成作品',
+          '把 natural / artificial 的界线变成直接身体经验',
+        ],
+        sourceUrl: grisiVenice,
+        images: [],
+        relations: [],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Technologies of Enchantment — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Laura Grisi 2022', url: grisiVenice }],
+  },
+
+  'venice-grazia-varisco': {
+    artistId: 'venice-grazia-varisco',
+    projectCoverage: '2 个 participatory-magnet / motor-light kinetic 节点已建立深档案 · 1959–1968',
+    imageCoverage: '0 / 2 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Varisco 把 viewer 明确当成 co-author：有的作品需要观众亲手移动磁铁，有的则让 motor、Perspex 和 neon 自动重组光形；“时间”因此进入作品结构。',
+    projects: [
+      {
+        title: 'Tavole magnetiche',
+        cluster: 'metal surface / movable magnets / viewer co-authorship',
+        period: '1959–1962',
+        summary: '简单 metal surface 上放置不同颜色、形状、尺寸的 magnets；观众可以直接移动这些元素，因此 composition 不再固定，作品状态由每次触摸重新决定。',
+        actions: [
+          '准备 flat metal support 作为 magnetic field',
+          '制作多种 colour / shape / size 的 movable magnets',
+          '取消唯一正确 arrangement',
+          '邀请观众直接触摸、移动和重新组合 elements',
+          '把 temporal change 与 viewer decision 作为作品的一部分',
+        ],
+        sourceUrl: variscoVenice,
+        images: [],
+        relations: [rel('展览', 'Gruppo T / programmed art context', 'viewer invited to “please touch”'), rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion')],
+      },
+      {
+        title: 'Schemi luminosi variabili',
+        cluster: 'Perspex / electric motor / neon / real + illusory movement',
+        period: '1961–1968',
+        summary: 'black box / dark plastic surface 内部结合 transparent Perspex、electric motor 与 neon。motor rotation 使 light cuts 不断改变方向、叠加和消失，像持续重组的 kaleidoscope。',
+        actions: [
+          '在 box-like structure 内安装 transparent Perspex element',
+          '用 electric motor 驱动内部部件缓慢旋转',
+          '配置 neon lamp 作为 active light source',
+          '通过 dark outer surface 强化 luminous shapes 的出现 / 消失',
+          '让 real mechanical movement 与 optical illusion 同时发生',
+        ],
+        sourceUrl: variscoVenice,
+        images: [],
+        relations: [rel('展览', 'Venice Biennale', '1964 / 1986 historical presentations'), rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Venice Biennale 1964 / 1986', 'Technologies of Enchantment — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Grazia Varisco 2022', url: variscoVenice }],
+  },
+
+  'venice-nanda-vigo': {
+    artistId: 'venice-nanda-vigo',
+    projectCoverage: '3 个 Cronotopi / Diaframmi / walk-through light-environment 节点已建立深档案 · 1962–1968',
+    imageCoverage: '0 / 3 项目暂不使用不稳定外链图像',
+    note: '精选项目档案，尚非作品全集。Vigo 把 architecture、industrial glass 与 light 合成“space-time”机器：光没有固定体积，却能借 ribbed glass、mirror、neon 与 aluminium 改变观看者对空间边界的判断。',
+    projects: [
+      {
+        title: 'Cronotopi / Spazi-tempi',
+        cluster: 'aluminium / industrial ribbed glass / reflected light',
+        period: '1962–1968',
+        summary: 'rectangular aluminium structures 中嵌入 industrial textured glass，内外光源穿过 ribbed surface 产生 iridescent shift。作品既像建筑构件又像 optical portal。',
+        actions: [
+          '以 rectangular aluminium frame 建立 basic module',
+          '嵌入 ribbed / textured industrial glass',
+          '从内部或外部照明，利用 glass refraction 改变 surface appearance',
+          '让 viewer position 决定反射、透视与 iridescence',
+          '把 sculpture 命名为 Spazi-tempi，强调 perception 随时间与移动变化',
+        ],
+        sourceUrl: vigoVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+      {
+        title: 'Ambienti cronotopici',
+        cluster: 'walk-through light architecture / modular environment',
+        period: 'from 1967',
+        summary: 'Vigo 将 Cronotopi 扩展成可进入的 environmental structure。观众穿行其中时，ribbed glass 与 light 让墙面似乎不断移动，空间边界变得不稳定。',
+        actions: [
+          '将 single Cronotopo 扩展为 multiple complementary modules',
+          '按 architecture scale 排列，使 viewer 可以穿行',
+          '用 natural / artificial light 同时激活 glass surfaces',
+          '让移动中的身体成为 shifting-space illusion 的必要条件',
+        ],
+        sourceUrl: vigoVenice,
+        images: [],
+        relations: [],
+      },
+      {
+        title: 'Diaframmi',
+        cluster: 'tubular metal / textured glass / stacked perceptual screen',
+        period: '1968',
+        summary: 'Diaframmi 使用 tubular metal frame 与 textured glass，既像 screen 又像 suspended spatial divider。多个 units 可堆叠或成组排列，形成时间和空间被暂停般的闪烁区域。',
+        actions: [
+          '以 tubular metal frame 代替较重 rectangular body',
+          '覆盖 textured industrial glass',
+          '将 units stack / group 成不同 spatial configurations',
+          '利用 reflected / refracted light 削弱实体边界',
+          '让 installation 在 sculpture、screen 与 architecture 之间切换',
+        ],
+        sourceUrl: vigoVenice,
+        images: [],
+        relations: [rel('展览', 'Technologies of Enchantment — Venice Biennale 2022', 'Central Pavilion historical capsule')],
+      },
+    ],
+    awards: [],
+    exhibitions: ['Technologies of Enchantment — Venice Biennale 2022'],
+    sources: [{ label: 'La Biennale · Nanda Vigo 2022', url: vigoVenice }],
+  },
+};
