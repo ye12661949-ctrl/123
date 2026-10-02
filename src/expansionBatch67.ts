@@ -1,6 +1,8 @@
 import type { Artist } from './data';
+import { artistBatch68 } from './expansionBatch68';
 
 export const artistBatch67: Artist[] = [
+  ...artistBatch68,
   {
     id:'moyra-davey', name:'Moyra Davey', born:'1958', base:'Canada / United States',
     intro:'以摄影、写作、电影与邮寄系统连接日常物件、阅读、记忆和图像流通；常把照片折叠、贴邮票并真正寄出，使运输痕迹成为作品的一部分。',
