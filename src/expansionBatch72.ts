@@ -1,6 +1,8 @@
 import type { Artist } from './data';
+import { artistBatch73 } from './expansionBatch73';
 
 export const artistBatch72: Artist[] = [
+  ...artistBatch73,
   {
     id:'alfredo-jaar', name:'Alfredo Jaar', born:'1956', base:'Chile / United States',
     intro:'以摄影、电影、文本与装置研究政治暴力、迁徙、灾难及新闻图像的观看伦理，持续追问图像如何让观众成为见证者。',
