@@ -1,6 +1,8 @@
 import type { Artist } from './data';
+import { artistBatch74 } from './expansionBatch74';
 
 export const artistBatch73: Artist[] = [
+  ...artistBatch74,
   {
     id:'sarah-sze', name:'Sarah Sze', born:'1969', base:'United States',
     intro:'以日常物、图像、投影、绘画与建筑尺度装置组织高度复杂的信息环境，持续研究物质、图像、时间与注意力如何在空间中发生。',
