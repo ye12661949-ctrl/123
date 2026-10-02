@@ -1,6 +1,8 @@
 import type { Artist } from './data';
+import { artistBatch69 } from './expansionBatch69';
 
 export const artistBatch68: Artist[] = [
+  ...artistBatch69,
   {
     id:'samuel-fosso', name:'Samuel Fosso', born:'1962', base:'Cameroon / Central African Republic / France',
     intro:'以工作室自画像、服装与角色扮演探索身份建构、泛非历史与黑人政治图像；从商业肖像摄影出发，把自己转化为历史人物与社会类型。',
