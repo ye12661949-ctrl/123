@@ -36,6 +36,7 @@ import { artistBatch54 } from './expansionBatch54';
 import { artistBatch55 } from './expansionBatch55';
 import { artistBatch56 } from './expansionBatch56';
 import { artistBatch57 } from './expansionBatch57';
+import { artistBatch58 } from './expansionBatch58';
 
 const source = 'https://www.foam.org/events/foam-talent-2016';
 const rosterSource = 'https://www.foam.org/nl/events/foam-talent-2017-new-york';
@@ -79,6 +80,6 @@ const rosterArtists: Artist[] = records.map(([id,name,base,method,subject]) => (
 
 // Expansion batches are routed through this already-imported directory module so they enter data.ts without duplicating the global catalogue logic.
 // Deep profiles still come before the generic Foam roster; data.ts performs final id/name de-duplication.
-export const foamTalent2016Artists: Artist[] = [...artistBatch57, ...artistBatch56, ...artistBatch55, ...artistBatch54, ...artistBatch53, ...artistBatch52, ...artistBatch51, ...artistBatch50, ...artistBatch49, ...artistBatch48, ...artistBatch47, ...artistBatch46, ...artistBatch45, ...artistBatch44, ...artistBatch43, ...artistBatch42, ...artistBatch41, ...artistBatch40, ...artistBatch39, ...artistBatch38, ...artistBatch37, ...artistBatch36, ...artistBatch35, ...artistBatch34, ...artistBatch33, ...artistBatch32, ...artistBatch31, ...artistBatch30, ...artistBatch28, ...artistBatch27, ...foamTalent2016DeepArtists7, ...foamTalent2016DeepArtists6, ...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
+export const foamTalent2016Artists: Artist[] = [...artistBatch58, ...artistBatch57, ...artistBatch56, ...artistBatch55, ...artistBatch54, ...artistBatch53, ...artistBatch52, ...artistBatch51, ...artistBatch50, ...artistBatch49, ...artistBatch48, ...artistBatch47, ...artistBatch46, ...artistBatch45, ...artistBatch44, ...artistBatch43, ...artistBatch42, ...artistBatch41, ...artistBatch40, ...artistBatch39, ...artistBatch38, ...artistBatch37, ...artistBatch36, ...artistBatch35, ...artistBatch34, ...artistBatch33, ...artistBatch32, ...artistBatch31, ...artistBatch30, ...artistBatch28, ...artistBatch27, ...foamTalent2016DeepArtists7, ...foamTalent2016DeepArtists6, ...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
 
 export const foamTalent2016Source = source;
