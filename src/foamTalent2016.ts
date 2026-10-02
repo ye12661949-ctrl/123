@@ -17,6 +17,7 @@ import { artistBatch35 } from './expansionBatch35';
 import { artistBatch36 } from './expansionBatch36';
 import { artistBatch37 } from './expansionBatch37';
 import { artistBatch38 } from './expansionBatch38';
+import { artistBatch39 } from './expansionBatch39';
 
 const source = 'https://www.foam.org/events/foam-talent-2016';
 const rosterSource = 'https://www.foam.org/nl/events/foam-talent-2017-new-york';
@@ -50,25 +51,16 @@ export const foamTalent2016ArtistIds = [
 ];
 
 const rosterArtists: Artist[] = records.map(([id,name,base,method,subject]) => ({
-  id,
-  name,
-  born:'—',
-  base,
+  id,name,born:'—',base,
   intro:`2016 Foam Talent 入选艺术家。本站先把其纳入完整届次目录，并继续补具体项目、制作动作与作品图。`,
-  methods:method.split('、'),
-  subjects:subject.split('、'),
-  outputs:['摄影','摄影书 / 展览'],
-  institutions:['Foam'],
-  achievements:['Foam Talent 2016'],
+  methods:method.split('、'),subjects:subject.split('、'),outputs:['摄影','摄影书 / 展览'],institutions:['Foam'],achievements:['Foam Talent 2016'],
   whyImportant:'先作为 Foam Talent 2016 的完整制度节点建立档案，避免目录只显示数据库里偶然已有的少数艺术家。',
   projects:[{year:'2016',title:'Foam Talent 2016',type:'人才计划 / 群展 / Foam Magazine #45',facts:['入选 2016 Foam Talent。','作品进入 Foam Magazine #45 Talent Issue，并参与该届 Foam Talent 展览与巡展体系。'],reading:'从这一届开始可直接按完整名单进入艺术家，而不是依赖关键词反向匹配。'}],
-  images:[],
-  sourceLabel:'Foam · 2016 Talent roster',
-  sourceUrl:rosterSource
+  images:[],sourceLabel:'Foam · 2016 Talent roster',sourceUrl:rosterSource
 }));
 
 // Expansion batches are routed through this already-imported directory module so they enter data.ts without duplicating the global catalogue logic.
 // Deep profiles still come before the generic Foam roster; data.ts performs final id/name de-duplication.
-export const foamTalent2016Artists: Artist[] = [...artistBatch38, ...artistBatch37, ...artistBatch36, ...artistBatch35, ...artistBatch34, ...artistBatch33, ...artistBatch32, ...artistBatch31, ...artistBatch30, ...artistBatch28, ...artistBatch27, ...foamTalent2016DeepArtists7, ...foamTalent2016DeepArtists6, ...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
+export const foamTalent2016Artists: Artist[] = [...artistBatch39, ...artistBatch38, ...artistBatch37, ...artistBatch36, ...artistBatch35, ...artistBatch34, ...artistBatch33, ...artistBatch32, ...artistBatch31, ...artistBatch30, ...artistBatch28, ...artistBatch27, ...foamTalent2016DeepArtists7, ...foamTalent2016DeepArtists6, ...foamTalent2016DeepArtists5, ...foamTalent2016DeepArtists4, ...foamTalent2016DeepArtists3, ...foamTalent2016DeepArtists2, ...foamTalent2016DeepArtists, ...rosterArtists];
 
 export const foamTalent2016Source = source;
