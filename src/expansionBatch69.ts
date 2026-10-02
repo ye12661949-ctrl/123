@@ -1,6 +1,8 @@
 import type { Artist } from './data';
+import { artistBatch70 } from './expansionBatch70';
 
 export const artistBatch69: Artist[] = [
+  ...artistBatch70,
   {
     id:'candida-hofer', name:'Candida Höfer', born:'1944', base:'Germany',
     intro:'以大型彩色摄影持续研究图书馆、博物馆、剧院等公共文化空间，常在人物缺席时拍摄，使建筑、秩序与制度本身成为肖像。',
