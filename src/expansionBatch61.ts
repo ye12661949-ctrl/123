@@ -1,6 +1,7 @@
 import type { Artist } from './data';
+import { artistBatch62 } from './expansionBatch62';
 
-export const artistBatch61: Artist[] = [
+const artistBatch61Own: Artist[] = [
   {
     id:'martha-rosler', name:'Martha Rosler', born:'1943', base:'United States',
     intro:'以摄影蒙太奇、录像、文字、表演和社会介入研究战争、家庭空间、性别、媒体与消费文化，把日常视觉语言转化为政治批判工具。',
@@ -30,3 +31,5 @@ export const artistBatch61: Artist[] = [
     projects:[{year:'2010',title:'Ten Thousand Waves',type:'九屏影像装置',facts:['历时约四年创作。','2013–2014 于 MoMA Marron Atrium 展出。'],reading:'观众在九块双面屏幕之间移动，使迁徙叙事本身成为空间经验。'}], images:[], sourceLabel:'MoMA · Isaac Julien', sourceUrl:'https://www.moma.org/artists/34532-isaac-julien'
   }
 ];
+
+export const artistBatch61: Artist[] = [...artistBatch62, ...artistBatch61Own];
