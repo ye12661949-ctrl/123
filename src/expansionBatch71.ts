@@ -1,6 +1,8 @@
 import type { Artist } from './data';
+import { artistBatch72 } from './expansionBatch72';
 
 export const artistBatch71: Artist[] = [
+  ...artistBatch72,
   {
     id:'walid-raad', name:'Walid Raad', born:'1967', base:'Lebanon / United States',
     intro:'以摄影、录像、虚构档案、讲演与装置研究黎巴嫩战争、历史书写、证据制度以及艺术机构如何生产记忆。',
