@@ -243,6 +243,7 @@ const combinedArtistArchives: Record<string, ArtistArchive> = {
   ...archiveBatch23,
   ...archiveBatch24,
   ...archiveBatch25,
+  ...archiveBatch327,
   ...foamFocusArchives,
   ...foamResearchArchives,
 };
