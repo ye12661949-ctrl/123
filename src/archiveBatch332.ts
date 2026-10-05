@@ -4,11 +4,13 @@ import { archiveExtensions335 } from './archiveBatch335';
 import { archiveExtensions336 } from './archiveBatch336';
 import { archiveExtensions337 } from './archiveBatch337';
 import { archiveExtensions338 } from './archiveBatch338';
+import { archiveExtensions339 } from './archiveBatch339';
 
 export const archiveExtensions332: Record<string, Partial<ArtistArchive> & { projects?: ArtistArchive['projects'] }> = {
   ...archiveExtensions333,
   ...archiveExtensions337,
   ...archiveExtensions338,
+  ...archiveExtensions339,
   'gillian-wearing': {
     note: archiveExtensions336['gillian-wearing']?.note || '把 Wearing 的实践进一步理解为“交换观看位置”：匿名坦白、公共空间表演、家庭角色重演和面具自画像，持续把身份变成可制作、替换和再观看的形式。',
     projects:[
