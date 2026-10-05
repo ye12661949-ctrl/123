@@ -1,6 +1,8 @@
 import type { ArtistArchive } from './archiveData';
+import { archiveExtensions334 } from './archiveBatch334';
 
 export const archiveExtensions333: Record<string, Partial<ArtistArchive> & { projects?: ArtistArchive['projects'] }> = {
+  ...archiveExtensions334,
   'allan-sekula': {
     note: '深化 Sekula 的关键不在把他归入“社会纪实”，而在摄影、文字、章节编排与劳动史如何共同构成论证。Fish Story 把港口从风景重新解释为全球资本的机器：集装箱、自动化、船员缩减、失业与危险劳动都进入图像结构。与传统人道主义纪实不同，他不断暴露摄影所谓客观性的制度条件。',
     projects: [
