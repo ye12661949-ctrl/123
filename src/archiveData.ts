@@ -1,4 +1,10 @@
 import { foamResearchArchives } from './foamResearchBatch';
+import { archiveBatch319 } from './archiveBatch319';
+import { archiveBatch320 } from './archiveBatch320';
+import { archiveBatch321 } from './archiveBatch321';
+import { archiveBatch322 } from './archiveBatch322';
+import { archiveBatch323 } from './archiveBatch323';
+import { archiveBatch324 } from './archiveBatch324';
 import { foamFocusArchives } from './foamFocusBatch';
 import { archiveBatch25 } from './biennaleExpansion25';
 import { archiveBatch24 } from './expansionBatch24';
@@ -245,6 +251,12 @@ const combinedArtistArchives: Record<string, ArtistArchive> = {
   ...archiveBatch25,
   ...foamFocusArchives,
   ...foamResearchArchives,
+  ...archiveBatch319,
+  ...archiveBatch320,
+  ...archiveBatch321,
+  ...archiveBatch322,
+  ...archiveBatch323,
+  ...archiveBatch324,
 };
 
 export const artistArchives: Record<string, ArtistArchive> = Object.fromEntries(
