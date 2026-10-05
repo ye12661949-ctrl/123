@@ -251,7 +251,8 @@ const combinedArtistArchives: Record<string, ArtistArchive> = {
 export const artistArchives: Record<string, ArtistArchive> = Object.fromEntries(
   Object.entries(combinedArtistArchives).map(([artistId, archive]) => {
     const patches = archiveImagePatches[artistId] ?? {};
-    const additions = [...(archiveExtensions23[artistId] ?? []), ...(archiveExtensions22[artistId] ?? []), ...(archiveExtensions17[artistId] ?? []), ...(archiveExtensions14[artistId] ?? []), ...(artistId === 'gillian-wearing' ? [wearingExtension16] : [])].filter(item => !archive.projects.some(project => project.title === item.title));
+    const patch332 = archiveExtensions332[artistId] ?? {};
+    const additions = [...(archiveExtensions23[artistId] ?? []), ...((patch332.projects ?? []) as any[]), ...(archiveExtensions22[artistId] ?? []), ...(archiveExtensions17[artistId] ?? []), ...(archiveExtensions14[artistId] ?? []), ...(artistId === 'gillian-wearing' ? [wearingExtension16] : [])].filter(item => !archive.projects.some(project => project.title === item.title));
     const projects = [...archive.projects, ...additions].map(project => ({
       ...project,
       images: [...project.images, ...(patches[project.title] ?? [])],
@@ -261,6 +262,7 @@ export const artistArchives: Record<string, ArtistArchive> = Object.fromEntries(
       artistId,
       {
         ...archive,
+        ...patch332,
         projects,
         projectCoverage: additions.length ? `${projects.length} 个精选项目已索引` : archive.projectCoverage,
         note: additions.length ? '各项目整理制作动作、材料、年份与逐项来源。当前为精选项目档案，尚非作品全集。' : archive.note,
