@@ -7,6 +7,7 @@ import { archiveExtensions338 } from './archiveBatch338';
 import { archiveExtensions339 } from './archiveBatch339';
 import { archiveExtensions340 } from './archiveBatch340';
 import { archiveExtensions341 } from './archiveBatch341';
+import { archiveExtensions342 } from './archiveBatch342';
 
 export const archiveExtensions332: Record<string, Partial<ArtistArchive> & { projects?: ArtistArchive['projects'] }> = {
   ...archiveExtensions333,
@@ -15,6 +16,24 @@ export const archiveExtensions332: Record<string, Partial<ArtistArchive> & { pro
   ...archiveExtensions339,
   ...archiveExtensions340,
   ...archiveExtensions341,
+  'allan-sekula': {
+    note: archiveExtensions342['allan-sekula']?.note || archiveExtensions333['allan-sekula']?.note,
+    projects:[...(archiveExtensions333['allan-sekula']?.projects || []),...(archiveExtensions342['allan-sekula']?.projects || [])],
+    exhibitions:[...(archiveExtensions333['allan-sekula']?.exhibitions || []),...(archiveExtensions342['allan-sekula']?.exhibitions || [])],
+    sources:[...(archiveExtensions333['allan-sekula']?.sources || []),...(archiveExtensions342['allan-sekula']?.sources || [])]
+  },
+  'an-my-le': {
+    note: archiveExtensions342['an-my-le']?.note || archiveExtensions333['an-my-le']?.note,
+    projects:[...(archiveExtensions333['an-my-le']?.projects || []),...(archiveExtensions342['an-my-le']?.projects || [])],
+    exhibitions:[...(archiveExtensions333['an-my-le']?.exhibitions || []),...(archiveExtensions342['an-my-le']?.exhibitions || [])],
+    sources:[...(archiveExtensions333['an-my-le']?.sources || []),...(archiveExtensions342['an-my-le']?.sources || [])]
+  },
+  'zanele-muholi': {
+    note: archiveExtensions342['zanele-muholi']?.note || archiveExtensions333['zanele-muholi']?.note,
+    projects:[...(archiveExtensions333['zanele-muholi']?.projects || []),...(archiveExtensions342['zanele-muholi']?.projects || [])],
+    exhibitions:[...(archiveExtensions333['zanele-muholi']?.exhibitions || []),...(archiveExtensions342['zanele-muholi']?.exhibitions || [])],
+    sources:[...(archiveExtensions333['zanele-muholi']?.sources || []),...(archiveExtensions342['zanele-muholi']?.sources || [])]
+  },
   'gillian-wearing': {
     note: archiveExtensions336['gillian-wearing']?.note || '把 Wearing 的实践进一步理解为“交换观看位置”：匿名坦白、公共空间表演、家庭角色重演和面具自画像，持续把身份变成可制作、替换和再观看的形式。',
     projects:[
