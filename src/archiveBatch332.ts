@@ -1,6 +1,8 @@
 import type { ArtistArchive } from './archiveData';
+import { archiveExtensions333 } from './archiveBatch333';
 
 export const archiveExtensions332: Record<string, Partial<ArtistArchive> & { projects?: ArtistArchive['projects'] }> = {
+  ...archiveExtensions333,
   'gillian-wearing': {
     note:'把 Wearing 的实践进一步理解为“交换观看位置”：匿名坦白、公共空间表演、家庭角色重演和面具自画像，持续把身份变成可制作、替换和再观看的形式。',
     projects:[
