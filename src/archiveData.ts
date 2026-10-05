@@ -245,7 +245,9 @@ const combinedArtistArchives: Record<string, ArtistArchive> = {
   ...archiveBatch25,
   ...foamFocusArchives,
   ...foamResearchArchives,
+  ...archiveBatch327,
   ...archiveBatch328,
+  ...archiveBatch329,
 };
 
 export const artistArchives: Record<string, ArtistArchive> = Object.fromEntries(
