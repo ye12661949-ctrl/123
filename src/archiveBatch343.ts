@@ -16,7 +16,9 @@ export const archiveBatch343: Record<string, ArtistArchive> = {
         '遮掉statement：仍有距离与陌生人，但论坛和社会论断不可由图像独立推出。',
         '独立判断：媒介转换强；再传播图像可能复制它所批评的窥视。'
       ],
-      sourceUrl: 'https://mishkahenner.com/No-Man-s-Land', images: [], relations: []
+      sourceUrl: 'https://mishkahenner.com/No-Man-s-Land', images: [
+        {url:'https://freight.cargo.site/t/original/i/dfed59d515aa8e140345ac556a4091ca95862117fbaa78d018127d8e89e6df44/Carretera-de-Fortuna--Murcia--Spain.jpg',title:'Carretera de Fortuna',credit:'© Mishka Henner',sourceUrl:'https://mishkahenner.com/No-Man-s-Land',sourceLabel:'艺术家原站'}
+      ], relations: []
     }],
     awards: ['Deutsche Börse Photography Prize 2013 入围'],
     exhibitions: ['Les Rencontres d’Arles 2011'],
