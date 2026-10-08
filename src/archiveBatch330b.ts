@@ -7,4 +7,4 @@ projects:[
 {title:'Untitled Slide Sequence',cluster:'sequence / factory',period:'1972',summary:'连续幻灯片记录工人离开工厂的重复动作，以序列和时间取代单张照片的决定性瞬间。',actions:['连续拍摄','保持相近构图','以幻灯片展示','让重复形成节奏'],sourceUrl:'https://www.moma.org/artists/31040-allan-sekula',images:[],relations:[]}
 ],
 awards:[],exhibitions:[],sources:[{label:'MoMA',url:'https://www.moma.org/artists/31040-allan-sekula'}]
-}}};
+}};
