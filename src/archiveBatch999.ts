@@ -235,7 +235,7 @@ export const archiveBatch999: Record<string, ArtistArchive> = {
       },
       {
         "label": "Aalto森林遥感合作介绍",
-        "url": "https://research.aalto.fi/en/publications/from-needles-to-landscapes-a-novel-approach-to-scaling-forest-spe"
+        "url": "https://research.aalto.fi/fi/projects/freedles-erc/"
       }
     ]
   }
