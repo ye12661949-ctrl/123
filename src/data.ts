@@ -32,6 +32,7 @@ import { artistBatch16, archiveBatch16, wearingExtension16 } from './expansionBa
 import { artistBatch18 } from './expansionBatch18';
 import { artistBatch17, archiveBatch17, archiveExtensions17 } from './expansionBatch17';
 import { archiveBatch5 } from './archiveBatch5';
+import { broadeningArtists } from './broadeningRegistry';
 
 export type Project = {
   year: string;
@@ -291,7 +292,7 @@ const coreArtists: Artist[] = [
   }
 ];
 
-const allArtists: Artist[] = [...foamResearchArtists, ...foamFocusArtists, ...photoRosterImmediateArtists, ...otherBiennaleArtists, ...veniceHistoricalArtists, ...venice2026Artists, ...foamTalent2016Artists, ...artistBatch26, ...artistBatch25, ...artistBatch24, ...artistBatch23, ...artistBatch22, ...artistBatch21, ...artistBatch20, ...artistBatch19, ...artistBatch18, ...coreArtists, ...expandedArtists, ...globalArtists, ...circuitArtists, ...circuitArtists2, ...researchArtists, ...biennaleArtists, ...newResearchArtists, ...artistBatch9, ...artistBatch10, ...artistBatch11, ...artistBatch12, ...artistBatch13, ...artistBatch14, ...artistBatch15, ...artistBatch16, ...artistBatch17, ...photoEditionArtists];
+const allArtists: Artist[] = [...broadeningArtists, ...foamResearchArtists, ...foamFocusArtists, ...photoRosterImmediateArtists, ...otherBiennaleArtists, ...veniceHistoricalArtists, ...venice2026Artists, ...foamTalent2016Artists, ...artistBatch26, ...artistBatch25, ...artistBatch24, ...artistBatch23, ...artistBatch22, ...artistBatch21, ...artistBatch20, ...artistBatch19, ...artistBatch18, ...coreArtists, ...expandedArtists, ...globalArtists, ...circuitArtists, ...circuitArtists2, ...researchArtists, ...biennaleArtists, ...newResearchArtists, ...artistBatch9, ...artistBatch10, ...artistBatch11, ...artistBatch12, ...artistBatch13, ...artistBatch14, ...artistBatch15, ...artistBatch16, ...artistBatch17, ...photoEditionArtists];
 const normalizeArtistName = (name: string) => name.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9\u3040-\u30ff\u3400-\u9fff]+/g, '');
 const uniqueArtists = allArtists.filter((artist, index, list) => list.findIndex(candidate => candidate.id === artist.id || normalizeArtistName(candidate.name) === normalizeArtistName(artist.name)) === index);
 bindPhotoEditionCanonicalIds(uniqueArtists);
